@@ -1,58 +1,56 @@
-import React, {useState} from 'react';
+import React, {ButtonHTMLAttributes, useState} from 'react';
 import './App.css';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import InputLabel from '@mui/material/InputLabel';
+import {createTheme, NativeSelect} from "@mui/material";
+
 
 function App() {
+    const theme = createTheme()
+    theme.spacing(15)
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
     const handleOptionChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedOption(e.target.value);
     };
+
     return (
         <div className="App">
-            <header>
-                Generatore di verbali
-            </header>
+            <script src="../swiftex/PdfTeXEngine.js"></script>
             <form>
-                <label htmlFor="verbalType">Seleziona il tipo di verbale</label>
-                <select value={selectedOption || ''} onChange={handleOptionChange}>
+                <InputLabel htmlFor="verbalType">Seleziona il tipo di verbale</InputLabel>
+                <NativeSelect value={selectedOption || ''} onChange={handleOptionChange}>
                     <option value="Verbale">Verbale</option>
                     <option value="AWP">AWP</option>
                     <option value="VLT">VLT</option>
-                    <option value="Scommese">Scommesse</option>
-                </select>
+                    <option value="Scommesse">Scommesse</option>
+                </NativeSelect>
                 {
                     selectedOption === 'AWP' && (
-                    <div>
-                    <label htmlFor="firmName">Denominazione esercizio</label>
-                    <input id="firmName" type="text"/>
-                    <label htmlFor="firmAddress">Indirizzo esercizio</label>
-                    <input id="firmAddress" type="text"/>
-                    <label htmlFor="cod">Codice esercizio</label>
-                    <input id="cod" type="text"/>
-                    <label htmlFor="activityType">Tipo di attività</label>
-                    <input id="activityType" type="text"/>
-                    <label htmlFor="surface">Superfice dell'attività</label>
-                    <input id="surface" type="text"/>
-                    <label htmlFor="name">Denominazione esercente</label>
-                    <input id="name" type="text"/>
-                    <label htmlFor="cf">Codice Fiscale Esercente</label>
-                    <input id="cf" type="text"/>
-                    <label htmlFor="oda">Ordine d'accesso</label>
-                    <input id="oda" type="text"/>
-                    <label htmlFor="year">Anno da verificare</label>
-                    <input id="year" type="text"/>
-                    <label htmlFor="date">Data della verifica</label>
-                    <input id="date" type="text"/>
-                    <label htmlFor="verb1">Verbalizzante uno</label>
-                    <input id="verb1" type="text"/>
-                    <label htmlFor="verb2">Verbalizzante due</label>
-                    <input id="verb2" type="text"/>
-                    </div>
+                        <div>
+                            <div>
+                                <TextField id="activityName" label="Nome esercizio" variant="outlined"/>
+                                <TextField id="activityAddress" label="Indirizzo esercizio" variant="outlined"/>
+                                <TextField id="cod" label="Codice esercizio" variant="outlined"/>
+                                <TextField id="activityType" label="Tipo di attività" variant="outlined"/>
+                                <TextField id="activitySurface" label="Superficie attività" variant="outlined"/>
+                                <TextField id="name" label="Nome esercente" variant="outlined"/>
+                                <TextField id="cf" label="CF/PI Esercente" variant="outlined"/>
+                                <TextField id="oda" label="Ordine d'accesso" variant="outlined"/>
+                                <TextField id="date" label="Data verifica" variant="outlined"/>
+                                <TextField id="year" label="Anno della verifica" variant="outlined"/>
+                                <TextField id="verb1" label="Verbalizzante uno" variant="outlined"/>
+                                <TextField id="verb2" label="Verbalizzante due" variant="outlined"/>
+
+                            </div>
+                            <Button variant="contained" color="primary" onClick={() => generateAWP()}>Genera</Button>
+                        </div>
                     )}
                 {
                     selectedOption === 'VLT' && (
                         <div>
-                        <p>NON IMPLEMENTATO</p>
+                            <p>NON IMPLEMENTATO</p>
                         </div>
                     )}
                 {
@@ -67,5 +65,41 @@ function App() {
     );
 }
 
+async function generateAWP() {
+    const activityName = (document.getElementById('activityName') as HTMLInputElement).value;
+    const activityAddress = (document.getElementById('activityAddress') as HTMLInputElement).value;
+    const cod = (document.getElementById('cod') as HTMLInputElement).value;
+    const activityType = (document.getElementById('activityType') as HTMLInputElement).value;
+    const activitySurface = (document.getElementById('activitySurface') as HTMLInputElement).value;
+    const name = (document.getElementById('name') as HTMLInputElement).value;
+    const cf = (document.getElementById('cf') as HTMLInputElement).value;
+    const oda = (document.getElementById('oda') as HTMLInputElement).value;
+    const date = (document.getElementById('date') as HTMLInputElement).value;
+    const year = (document.getElementById('year') as HTMLInputElement).value;
+    const verbalizzante1 = (document.getElementById('verb1') as HTMLInputElement).value;
+    const verbalizzante2 = (document.getElementById('verb2') as HTMLInputElement).value;
+    const verbale = JSON.stringify({
+        "denominazioneEsercizio": activityName,
+        "indirizzoEsercizio": activityAddress,
+        "codiceEsercizio": cod,
+        "tipoAttivita": activityType,
+        "superficieAttivita": activitySurface,
+        "denominazioneEsercente": name,
+        "cfEsercente": cf,
+        "verbalizzante1": verbalizzante1,
+        "verbalizzante2": verbalizzante2,
+        "ordineDiAccesso": oda,
+        "annoIscrizione": year,
+        "dataVerifica": date
+    })
+    const requestOptions = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: verbale
+    }
+    console.log("VERBALE:\n" + verbale)
+    const response = await fetch('http://localhost:8000/awp', requestOptions).then(response => console.log(response));
+
+}
 
 export default App;
