@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import {createTheme, NativeSelect} from "@mui/material";
+import axios from 'axios';
 
 
 function App() {
@@ -92,14 +93,29 @@ async function generateAWP() {
         "annoIscrizione": year,
         "dataVerifica": date
     })
-    const requestOptions = {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: verbale
-    }
-    console.log("VERBALE:\n" + verbale)
-    const response = await fetch('http://localhost:8000/awp', requestOptions).then(response => console.log(response));
 
+    console.log("VERBALE:\n" + verbale)
+    postVerbale(verbale)
+
+
+}
+
+async function postVerbale(verbale: string) {
+    try {
+        const data = await axios.post('http://localhost:8000/awp', verbale,
+            {
+                headers:
+                    {'Content-Type': 'application/json'},
+            })
+    } catch (e) {
+        if (axios.isAxiosError(e)) {
+            console.log(e);
+            return e.message;
+        } else {
+            console.log("unexpected error ", e)
+            return "unexpected error";
+        }
+    }
 }
 
 export default App;
