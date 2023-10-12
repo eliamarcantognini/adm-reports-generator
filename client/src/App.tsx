@@ -6,7 +6,6 @@ import InputLabel from '@mui/material/InputLabel';
 import {createTheme, NativeSelect} from "@mui/material";
 import axios from 'axios';
 
-
 function App() {
     const theme = createTheme()
     theme.spacing(15)
@@ -94,19 +93,34 @@ async function generateAWP() {
         "dataVerifica": date
     })
 
-    console.log("VERBALE:\n" + verbale)
-    postVerbale(verbale)
-
+    const p: HTMLParagraphElement = document.createElement('p');
+    p.innerHTML = "Generazione in corso...";
+    document.body.appendChild(p);
+    postVerbale(verbale, "awp", p)
 
 }
 
-async function postVerbale(verbale: string) {
+async function postVerbale(verbale: string, tipo: string, p: HTMLParagraphElement) {
     try {
-        const data = await axios.post('http://localhost:8000/awp', verbale,
+        let filename = "";
+        await axios.post('http://localhost:8000/awp', verbale,
             {
+                responseType: 'blob',
                 headers:
-                    {'Content-Type': 'application/json'},
-            })
+                    {'Content-Type': 'application/json', 'Access-Control-Expose-Headers': 'Content-Disposition'},
+            }).then(response => {
+            const disposition = response.headers['content-disposition'];
+            return response.data;
+        }).then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = tipo + "_" + Date.now().toString();
+            document.body.appendChild(a); // append the element to the dom
+            a.click();
+            a.remove();
+            p.remove();// afterwards, remove the element
+        })
     } catch (e) {
         if (axios.isAxiosError(e)) {
             console.log(e);

@@ -1,16 +1,15 @@
-import io
-
-from fastapi import FastAPI, Response, BackgroundTasks
-from string import Template
-
-from starlette.middleware.cors import CORSMiddleware
-from starlette.responses import FileResponse
 import datetime
 import os
+from string import Template
+
+from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
+from starlette.responses import FileResponse
 
 from models.AWP import AWPModel
 
-app = FastAPI(title="Generatore Di Verbali API", description="API per il Generatore Di Verbali", version="0.0.1", docs_url="/docs", )
+app = FastAPI(title="Generatore Di Verbali API", description="API per il Generatore Di Verbali", version="0.0.1",
+              docs_url="/docs", )
 
 # enable cors
 allow_all = ['*']
@@ -22,12 +21,13 @@ app.add_middleware(
     allow_headers=allow_all
 )
 
+
 @app.get("/")
 async def root():
     return {"message": "Benvenuto "}
 
 
-@app.post("/awp")
+@app.post("/awp", response_class=FileResponse)
 def awp(awpMessage: AWPModel):
     with open('templates/awp.tex', mode='r', encoding='utf-8') as file:
         template = Template(file.read())
@@ -40,11 +40,20 @@ def awp(awpMessage: AWPModel):
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(awpMessage)))
     clean(tex, aux, log)
-    return FileResponse(f"pdf\\{filename}.pdf")
+    headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control_Allow-Methods": "POST",
+        'Content-Disposition': f'attachment; filename={filename}.pdf',
+    }
+    return FileResponse(f"pdf\\{filename}.pdf", media_type='application/pdf', filename=f"{filename}.pdf",
+                        headers=headers)
+
 
 @app.post("/vlt")
 async def vlt(name: str):
     return {"message": f"Hello {name}"}
+
 
 @app.post("/scommesse")
 async def scommesse(name: str):
