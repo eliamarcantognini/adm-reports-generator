@@ -5,7 +5,7 @@ class AWPModel(BaseModel):
     indirizzoEsercizio: str = "",
     codiceEsercizio: str = "",
     tipoAttivita: str = "",
-    superficeAttivita: str = "",
+    superficieAttivita: str = "",
     denominazioneEsercente: str = "",
     cfEsercente: str = "",
     verbalizzante1: str = "",
