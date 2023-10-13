@@ -113,7 +113,7 @@ async function generateAWP() {
 async function postVerbale(verbale: string, tipo: string, p: HTMLParagraphElement) {
     try {
         let filename = "";
-        await axios.post('http://localhost:8000/awp', verbale,
+        await axios.post('http://localhost:8000/' + tipo, verbale,
             {
                 responseType: 'blob',
                 headers:
