@@ -30,19 +30,24 @@ function App() {
                     selectedOption === 'AWP' && (
                         <div>
                             <div>
-                                <TextField id="activityName" label="Nome esercizio" variant="outlined"/>
-                                <TextField id="activityAddress" label="Indirizzo esercizio" variant="outlined"/>
-                                <TextField id="cod" label="Codice esercizio" variant="outlined"/>
-                                <TextField id="activityType" label="Tipo di attività" variant="outlined"/>
-                                <TextField id="activitySurface" label="Superficie attività" variant="outlined"/>
-                                <TextField id="name" label="Nome esercente" variant="outlined"/>
-                                <TextField id="cf" label="CF/PI Esercente" variant="outlined"/>
+                                <div>
+                                    <TextField id="activityName" label="Nome esercizio" variant="outlined"/>
+                                    <TextField id="activityAddress" label="Indirizzo esercizio" variant="outlined"/>
+                                    <TextField id="cod" label="Codice esercizio" variant="outlined"/>
+                                    <TextField id="activityType" label="Tipo di attività" variant="outlined"/>
+                                    <TextField id="activitySurface" label="Superficie attività" variant="outlined"/>
+                                    <TextField id="activityCF" label="PI attività" variant="outlined"/>
+                                </div>
+                                <div>
+                                    <TextField id="name" label="Nome esercente" variant="outlined"/>
+                                    <TextField id="cf" label="CF Esercente" variant="outlined"/>
+                                </div>
                                 <TextField id="oda" label="Ordine d'accesso" variant="outlined"/>
                                 <TextField id="date" label="Data verifica" variant="outlined"/>
                                 <TextField id="year" label="Anno della verifica" variant="outlined"/>
-                                <TextField id="verb1" label="Verbalizzante uno" variant="outlined"/>
-                                <TextField id="verb2" label="Verbalizzante due" variant="outlined"/>
-
+                                <TextField id="verb1" label="Verbalizzante" variant="outlined"/>
+                                <TextField id="verb2" label="Verbalizzante" variant="outlined"/>
+                                <TextField id="verb3" label="Verbalizzante" variant="outlined"/>
                             </div>
                             <Button variant="contained" color="primary" onClick={() => generateAWP()}>Genera</Button>
                         </div>
@@ -71,6 +76,7 @@ async function generateAWP() {
     const cod = (document.getElementById('cod') as HTMLInputElement).value;
     const activityType = (document.getElementById('activityType') as HTMLInputElement).value;
     const activitySurface = (document.getElementById('activitySurface') as HTMLInputElement).value;
+    const activityCF = (document.getElementById('activityCF') as HTMLInputElement).value;
     const name = (document.getElementById('name') as HTMLInputElement).value;
     const cf = (document.getElementById('cf') as HTMLInputElement).value;
     const oda = (document.getElementById('oda') as HTMLInputElement).value;
@@ -78,16 +84,19 @@ async function generateAWP() {
     const year = (document.getElementById('year') as HTMLInputElement).value;
     const verbalizzante1 = (document.getElementById('verb1') as HTMLInputElement).value;
     const verbalizzante2 = (document.getElementById('verb2') as HTMLInputElement).value;
+    const verbalizzante3 = (document.getElementById('verb3') as HTMLInputElement).value;
     const verbale = JSON.stringify({
-        "denominazioneEsercizio": activityName,
+        "denominazioneEsercizio": activityName.toUpperCase(),
         "indirizzoEsercizio": activityAddress,
         "codiceEsercizio": cod,
         "tipoAttivita": activityType,
         "superficieAttivita": activitySurface,
+        "picfAttivita": activityCF.toUpperCase(),
         "denominazioneEsercente": name,
-        "cfEsercente": cf,
+        "cfEsercente": cf.toUpperCase(),
         "verbalizzante1": verbalizzante1,
         "verbalizzante2": verbalizzante2,
+        "verbalizzante3": verbalizzante3,
         "ordineDiAccesso": oda,
         "annoIscrizione": year,
         "dataVerifica": date
