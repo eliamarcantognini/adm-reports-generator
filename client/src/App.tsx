@@ -32,6 +32,7 @@ function App() {
                         <div>
                             <div>
                                 <div>
+                                    <h3>DATI DELL'ESERCIZIO</h3>
                                     <TextField id="activityName" label="Nome esercizio" variant="outlined"/>
                                     <TextField id="activityAddress" label="Indirizzo esercizio" variant="outlined"/>
                                     <TextField id="cod" label="Codice esercizio" variant="outlined"/>
@@ -40,15 +41,19 @@ function App() {
                                     <TextField id="activityCF" label="PI attività" variant="outlined"/>
                                 </div>
                                 <div>
+                                    <h3>DATI DELL'ESERCENTE</h3>
                                     <TextField id="name" label="Nome esercente" variant="outlined"/>
                                     <TextField id="cf" label="CF Esercente" variant="outlined"/>
                                 </div>
-                                <TextField id="oda" label="Ordine d'accesso" variant="outlined"/>
-                                <TextField id="date" label="Data verifica" variant="outlined"/>
-                                <TextField id="year" label="Anno della verifica" variant="outlined"/>
-                                <TextField id="verb1" label="Verbalizzante" variant="outlined"/>
-                                <TextField id="verb2" label="Verbalizzante" variant="outlined"/>
-                                <TextField id="verb3" label="Verbalizzante" variant="outlined"/>
+                                <div>
+                                    <h3>DATI DELLA VERIFICA</h3>
+                                    <TextField id="oda" label="Ordine d'accesso" variant="outlined"/>
+                                    <TextField id="date" label="Data verifica" variant="outlined"/>
+                                    <TextField id="year" label="Anno della verifica" variant="outlined"/>
+                                    <TextField id="verb1" label="Verbalizzante" variant="outlined"/>
+                                    <TextField id="verb2" label="Verbalizzante" variant="outlined"/>
+                                    <TextField id="verb3" label="Verbalizzante" variant="outlined"/>
+                                </div>
                             </div>
                             <Button variant="contained" color="primary" onClick={() => generateAWP()}>Genera</Button>
                         </div>
