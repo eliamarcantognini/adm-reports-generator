@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import {createTheme, NativeSelect} from "@mui/material";
 import axios from 'axios';
+import {formatDate} from "./Utils";
 
 function App() {
     const theme = createTheme()
@@ -88,7 +89,7 @@ async function generateAWP() {
     const verbale = JSON.stringify({
         "denominazioneEsercizio": activityName.toUpperCase(),
         "indirizzoEsercizio": activityAddress,
-        "codiceEsercizio": cod,
+        "codiceEsercizio": cod.toUpperCase(),
         "tipoAttivita": activityType,
         "superficieAttivita": activitySurface,
         "picfAttivita": activityCF.toUpperCase(),
@@ -124,7 +125,7 @@ async function postVerbale(verbale: string, tipo: string, p: HTMLParagraphElemen
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = tipo + "_" + Date.now().toString();
+            a.download = tipo + "_" + formatDate(new Date());
             document.body.appendChild(a); // append the element to the dom
             a.click();
             a.remove();
