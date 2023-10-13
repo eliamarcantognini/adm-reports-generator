@@ -14,12 +14,14 @@
 \newcommand\denominazioneEsercizio{$denominazioneEsercizio}
 \newcommand\indirizzoEsercizio{$indirizzoEsercizio}
 \newcommand\codiceEsercizio{$codiceEsercizio}
+\newcommand\picfAttivita{$picfAttivita}
 \newcommand\tipoAttivita{$tipoAttivita}
 \newcommand\superficieAttivita{$superficieAttivita}
 \newcommand\denominazioneEsercente{$denominazioneEsercente}
 \newcommand\cfEsercente{$cfEsercente}
 \newcommand\verbalizzanteuno{$verbalizzante1}
 \newcommand\verbalizzantedue{$verbalizzante2}
+\newcommand\verbalizzantetre{$verbalizzante3}
 \newcommand\ordineDiAccesso{$ordineDiAccesso}
 \newcommand\annoIscrizione{$annoIscrizione}
 \newcommand\dataVerifica{$dataVerifica}
@@ -71,21 +73,21 @@
    \hline
     \multirowcell{3}{DENOMINAZIONE\\ ESERCIZIO} & \\ & \denominazioneEsercizio \\ & \\
     \hline
-    \multirowcell{5}{LUOGO DELLA \\VERIFICA} & \\ & Indirizzo: \indirizzoEsercizio\\ & Telefono:\\ & Codice esercizio: \codiceEsercizio \\ & \\
+    \multirowcell{5}{LUOGO DELLA \\VERIFICA} & \\ & Indirizzo: \indirizzoEsercizio \\ & Telefono:\\ & Codice esercizio: \codiceEsercizio \\ & \\
     \hline
-    \multirowcell{4}{DATI ESERCIZIO} & \\ & Attività: \tipoAttivita\\ & Superficie mq.: \superficieAttivita\\ & \\
+    \multirowcell{5}{DATI \\ ESERCIZIO} & \\ & Attività: \tipoAttivita \\ & Superficie mq.: \superficieAttivita \\ &  P.IVA/C.F.: \picfAttivita \\ & \\
     \hline
-    \multirowcell{5}{ESERCENTE} & \\ & Denominazione Esercente: \denominazioneEsercente\\ & Indirizzo: \indirizzoEsercizio\\ & Codice Fiscale: \cfEsercente\\ & \\
+    \multirowcell{5}{DATI \\ ESERCENTE} & \\ & Denominazione Esercente: \denominazioneEsercente \\ & Indirizzo: \indirizzoEsercizio\\ & Codice Fiscale: \cfEsercente\\ & \\
     \hline
-    \multirowcell{10}{RAPPRESENTANTE\\ IN ATTI \\\scriptsize{(persona presente al}\\\scriptsize{momento della verifica)}} & \\ & COGNOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ NOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & NATO A: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IL: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & RESIDENTE IN: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & INDIRIZZO: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_  \\ & Identificato a mezzo \begin{math}\;\square\end{math} carta d'identità \begin{math}\;\square\end{math} patente di guida \begin{math}\;\square\end{math} altro \\ & rilasciato/a da \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & scadente il \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & in qualità di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
+    \multirowcell{9}{RAPPRESENTANTE\\ IN ATTI \\ \scriptsize{(persona presente al}\\ \scriptsize{momento della verifica)}} & \\ & COGNOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ NOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & NATO A: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IL: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & RESIDENTE IN: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & INDIRIZZO: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Identificato a mezzo \begin{math}\;\square\end{math} carta d'identità \begin{math}\;\square\end{math} patente di guida \begin{math}\;\square\end{math} altro \\ & rilasciato/a da \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ scadente il \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & in qualità di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
     \hline
-    \multirowcell{8}{AGENZIA DELLE\\DOGANE\\E DEI MONOPOLI\\\scriptsize{Ufficio dei Monopoli per}\\\scriptsize{le Marche}\\\scriptsize{Sede di Pesaro}} & \\ & \\ & \\ & Verbalizzante: \verbalizzanteuno \\ & \\ & Verbalizzante: \verbalizzantedue  \\ & \\ & \\
+    \multirowcell{7}{AGENZIA DELLE\\DOGANE\\E DEI MONOPOLI\\ \scriptsize{Ufficio dei Monopoli per}\\ \scriptsize{le Marche}\\ \scriptsize{Sede di Pesaro}} & \\ & Verbalizzante: \verbalizzanteuno \\ & \\ & Verbalizzante: \verbalizzantedue \\ & \\ & Verbalizzante: \verbalizzantetre  \\ & \\
     \hline
 \end{tabularx}
 
 
 Data verifica: \dataVerifica \\
-Ora verifica: \_\_\_\_\_\_.\_\_\_\_\_\_.
+Inizio verifica: \_\_\_\_\_\_.\_\_\_\_\_\_.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
