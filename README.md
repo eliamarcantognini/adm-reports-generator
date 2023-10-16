@@ -1,2 +1,3 @@
-1. Install python 3.11
-2. Install django-text: pip install django-tex
+1. Install python 3.12
+2. Install nodejs and npm
+3. Install python package fastapi
