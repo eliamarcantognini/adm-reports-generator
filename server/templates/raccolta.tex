@@ -1,0 +1,324 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, top=2cm, bottom=3cm, left=1cm, right=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{lastpage}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\newcommand\npuntoraccolta{$npuntoraccolta}
+\newcommand\nconcessione{$nconcessione}
+\newcommand\concessionario{$concessionario$}
+\newcommand\denominazioneEsercizio{$denominazioneEsercizio}
+\newcommand\indirizzoEsercizio{$indirizzoEsercizio}
+\newcommand\dataInizioScommesse{$dataInizioScommesse}
+\newcommand\dataFineScommesse{$dataFineScommese}
+\newcommand\picfAttivita{$picfAttivita}
+\newcommand\denominazioneEsercente{$denominazioneEsercente}
+\newcommand\verbalizzanteuno{$verbalizzante1}
+\newcommand\verbalizzantedue{$verbalizzante2}
+\newcommand\verbalizzantetre{$verbalizzante3}
+\newcommand\ordineDiAccesso{$ordineDiAccesso}
+\newcommand\annoIscrizione{$annoIscrizione}
+\newcommand\dataVerifica{$dataVerifica}
+\newcommand\titoloAutorizzatorio{$titoloAutorizzatorio}
+\newcommand\dataTitoloAutorizzatorio{$dataTitoloAutorizzatorio}
+
+\newcommand\signature{%
+  \par\vspace{8ex}\noindent
+  \begin{tabular}[t]{@{}c@{}}
+    I VERBALIZZANTI\\ \\
+    \makebox[15em]{\dotfill}\\
+    \\
+    \makebox[15em]{\dotfill}\\
+    \\
+    \makebox[15em]{\dotfill}
+  \end{tabular}
+  \hfill
+  \begin{tabular}[t]{@{}c@{}}
+    LA PARTE\\ \\
+    \makebox[15em]{\dotfill}
+  \end{tabular}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{1.5cm}
+\lhead{\includegraphics[height=1cm]{logo-adm.jpg}}
+% DA CAMBIARE
+\rhead{\scriptsize{Segue processo verbale di verifica amministrativa concessionario: \concessionario}\\\scriptsize{Concessione n. \nconcessione punto n. \npuntoraccolta}\\\scriptsize{redatto in data \dataVerifica}}
+\cfoot{Pagina \thepage \hspace{1pt} di \pageref{LastPage}}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               FRONTESPIZIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{logo-adm.jpg}
+    \caption*{Ufficio dei Monopoli per le Marche\\Sezione distaccata di Pesaro}
+    \label{fig:logoadm}
+\end{figure}
+
+{\centering
+    \textbf{VERIFICA AMMINISTRATIVA}\\
+    \textit{PUNTO DI RACCOLTA N. \npuntoraccolta} \\
+    \textit{TITOLARE RACCOLTA SCOMMESSE CONCESSIONE N. \nconcessione}
+    \par
+}
+
+\begin{tabularx}{\linewidth}{|c|l|}
+   \hline
+    \multirowcell{7}{DATI \\ ESERCIZIO} & \\ & Denominazione: \denominazioneEsercizio \\ & Indirizzo: \indirizzoEsercizio \\ &  P.IVA/C.F.: \picfAttivita \\ & Telefono: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Orari: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
+    \hline
+    \multirowcell{3}{CONCESSIONARIO} & \\ & \concessionario \\ &  \\
+    \hline
+    \multirowcell{9}{TITOLARE\\ \scriptsize{o} \\ \scriptsize{AMMINISTRATORE}} & \\ & COGNOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ NOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & NATO A: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IL: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & RESIDENTE IN: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & INDIRIZZO: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Identificato a mezzo \begin{math}\;\square\end{math} carta d'identità \begin{math}\;\square\end{math} patente di guida \begin{math}\;\square\end{math} altro \\ & rilasciato/a da \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ scadente il \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & in qualità di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
+    \hline
+    \multirowcell{5}{Assistente del \\ titolare o \\ amministratore} & \\ & Sig. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Identificato a mezzo \begin{math}\;\square\end{math} carta d'identità \begin{math}\;\square\end{math} patente di guida \begin{math}\;\square\end{math} altro \\ & \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
+    \hline
+    \multirowcell{7}{AGENZIA DELLE\\DOGANE\\E DEI MONOPOLI\\ \scriptsize{Ufficio dei Monopoli per}\\ \scriptsize{le Marche}\\ \scriptsize{Sede di Pesaro}} & \\ & Verbalizzante: \verbalizzanteuno \\ & \\ & Verbalizzante: \verbalizzantedue \\ & \\ & Verbalizzante: \verbalizzantetre  \\ & \\
+    \hline
+\end{tabularx}
+
+
+Data verifica: \dataVerifica \\
+Inizio verifica: \_\_\_\_\_\_.\_\_\_\_\_\_.
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               CONTENUTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In data odierna \dataVerifica , alle ore \_\_\_\_\_.\_\_\_\_\_, i sopracitati dipendenti, funzionari dell'Agenzia delle Dogane e dei Monopoli – Ufficio dei Monopoli per le Marche, Sede di Pesaro,
+\begin{itemize}
+    \item ai sensi dell’ art 17 del D.M. 145 del 01/08/2022;
+    \item ai sensi dell’art. 21 del Disciplinare per la raccolta delle scommesse di cui all’art. 1 comma 643 lettera c) della Legge 23 dicembre 2014 n. 190;
+    \item ai sensi dell’art. 15, comma 8-duodecies del D.L. 1° luglio 2009, n. 78, convertito con modificazioni dalla legge 3 agosto 2009, n. 102 secondo cui “gli uffici dell’ADM, nell’adempimento dei loro compiti amministrativi e tributari, si avvalgono delle attribuzioni e dei poteri previsti dagli articoli 51 e 52 del decreto del Presidente della Repubblica 26 ottobre 1972, n. 633, e successive modificazioni, ove applicabili”;
+    % CHIEDERE SE DEVE RIMANARE
+    \item a norma dell’art. 8 D.L. 282/2002, convertito dall’art. 1 L. 27/2003, che assegna all’Agenzia la competenza in materia di amministrazione, riscossione e contenzioso delle entrate tributarie riferite ai giochi, anche di abilità, ai concorsi pronostici, alle scommesse e agli apparecchi da divertimento e intrattenimento;
+    % CHIEDERE SE DEVE RIMANARE
+    \item ai sensi dell’art. 7 D.L. 158/2012 convertito con legge 189/2012;
+    % CHIEDERE SE DEVE RIMANERE
+    \item in esecuzione dell’incarico all’uopo conferito con ordine d’accesso n. \ordineDiAccesso, a norma dell’art. 13 L. 689/81 e art. 38, c.7, L. 388/d ai fini di cui all’art. 110, c. 9, TULPS, dal Direttore dell’Ufficio in intestazione e munito di apposita autorizzazione rilasciata dallo stesso Direttore a norma dell’art. 52 del D.P.R. 633/72;
+    \item ai sensi dell’art. 35 della legge n. 4/1929;
+\end{itemize}
+
+accedono nel PUNTO DI RACCOLTA, situato all'interno dell'esercizio commerciale sopra citato, codice attività prevalente n. \_\_\_\_\_\_\_\_\_\_\_\_\_\_, per eseguirvi un controllo limitatamente alle attività svolte dal \dataInizioScommesse al \dataFineScommesse, redigendo all'uopo il presente verbale di operazioni compiute.\\
+Il controllo pertanto è finalizzato anche a ricondurre a tassazione (Imposta Unica di cui al D. Lgs. n. 504/1998) di eventuali scommesse allibrate in modo irregolare.\\
+\\
+In sede di accesso i verbalizzanti accertavano la presenza nel locale del Sig. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ in qualità di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ sopra generalizzato, e hanno invitato lo stesso ad esibire la documentazione concernente il controllo in atto, informando la parte che:
+
+\begin{enumerate}
+    \item L’attività ispettiva è avviata d’iniziativa.
+    \item Il controllo sarà quindi finalizzato ad accertare la regolarità della gestione dell’attività di raccolta delle scommesse, con particolare riguardo al riscontro della documentazione originale, che giustifica le somme rendicontate come giocate annullate, pagate e rimborsate, nel periodo indicato in premessa.
+    \item Pertanto si informa che dal controllo, eseguito nell’ambito delle generali funzioni attribuite alla Amministrazione dei monopoli di Stato ai sensi dell’art. 8 del D.L. 24 dicembre 2002, n. 282, può avere origine l’accertamento di irregolarità amministrative per inadempimenti relativi al rapporto concessorio e l’accertamento di irregolarità fiscali, nei confronti del concessionario.
+    \item In tale contesto viene precisato che l’accesso è effettuato sulla base di effettive esigenze di controllo sul luogo, dovendo gli operanti procedere al controllo contabile dell’attività svolta e ad eseguire eventuali ricerche di documentazione extracontabile di interesse ai fini del controllo fiscale, per la ricostruzione del volume della raccolta, anche per via telefonica o telematica, di giochi, concorsi pronostici ovvero di scommesse di qualsiasi genere.
+    \item Ai sensi delle disposizioni contenute nello Statuto del contribuente (L. n. 212/2000), si informa altresì, che le parti hanno la facoltà di:
+    \begin{enumerate}
+        \item farsi assistere, durante le attività di verifica e successivamente, da un professionista abilitato alla difesa innanzi agli organi di giustizia tributaria;
+        \item richiedere che l’esame dei documenti amministrativo contabili venga effettuato presso gli uffici dei verificatori o presso il professionista che la assiste o la rappresenta;
+        \item muovere rilievi e/o formulare osservazioni, dei quali sarà dato atto nei p.v. di verifica;
+        \item rivolgersi al Garante del contribuente che ha sede in Ancona Via Palestro, 15, nei casi in cui ritenga che i verificatori stiano procedendo alla verifica con modalità non conformi alla legge;
+        \item comunicare osservazioni e richieste all’Ufficio competente, entro sessanta giorni dalla notifica del p.v. di constatazione redatto a conclusione dell’intervento;
+        \item richiedere, consultare, esaminare, estrarre copia di ogni documento acquisito ai fini della verifica, previa adozione di idonee misure cautelative;
+        \item esercitare ogni altro diritto riconosciuto al contribuente dalla normativa vigente;
+        \item che l’Ufficio presso cui è possibile ottenere informazioni in ordine all’attività ispettiva è L’Agenzia delle Dogane e dei Monopoli – Ufficio per le Marche sede in Pesaro – Via Mameli, n° 9 – tel. 0719944295 – e-mail monopoli.marche.urp@adm.gov.it \\\\
+        In relazione alle sopra richiamate garanzie si da atto che la parte:
+        \begin{math}\square\end{math} SI \begin{math}\square\end{math} NON SI fa assistere da professionisti o personale qualificato esterno alla società.
+
+    \end{enumerate}
+
+\end{enumerate}
+
+Il/La Sig. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ esibisce la seguente documentazione:
+
+\begin{enumerate}
+    \item \textbf{Licenza} di pubblica sicurezza ai sensi dell’\textbf{art. 88} del T.U.L.P.S., avente ad oggetto le scommesse di cui all'art. 1 comma 643 lettera c) della Legge 23 dicembre 2014 n. 190,  rilasciata dalla Questura di \_\_\_\_\_\_\_\_\_\_\_\_ in data \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_ prot. \_\_\_\_\_\_\_\_\_\_\_\_;
+    \item Contratto con il TITOLARE DELLA RACCOLTA SCOMMESSE \concessionario del \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_ di cui al Titolo autorizzatorio rilasciato da AAMS n. \titoloAutorizzatorio del \dataTitoloAutorizzatorio
+    \item Contratto con Concessionario \_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_  del \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_ per l'attività di promozione, pubblicazione e diffusione dei giochi a distanza.
+\end{enumerate}
+
+Alla parte viene chiesto di effettuare una giocata e di annullarla. La ricevuta viene acquisita in copia. (all. N. \_\_\_\_\_\_\_\_\_\_\_\_)
+\\\\
+Con l’occasione i verbalizzanti rendono edotta la parte che le ricevute di gioco annullate, vincenti e rimborsate devono essere conservate ai sensi dell'art. 2219 del C.C. e dell'art. 22, comma 2 e 3, del DPR 600/1973, come disposto dall’art. 5 del DPR 66/2002. Altresì  rendono edotta la parte che 19 del Decreto 145 del 01/08/2022 prescrive: \textit{“Per le scommesse a quota fissa effettuate presso i luoghi di vendita, il pagamento delle vincite nonche' dei rimborsi e' effettuato previa validazione della ricevuta di partecipazione e previa comunicazione da parte del concessionario al totalizzatore
+nazionale degli esiti vincenti delle tipologie di scommesse a quota fissa legate agli avvenimenti.”}.
+\\\\
+Si rammenta che chi non tiene o non conserva secondo le prescrizioni le scritture contabili, i documenti e i registri previsti dalle leggi in materia… è punito con la sanzione amministrativa da € 1.000,00 a € 8.000,00 ai sensi dell’art. 9 del D.Lgs. 19 dicembre 1997 n. 471.
+\\\\
+Alla parte viene chiesto di esibire il registro dell’antiriciclaggio di cui al D.L. 21/11/2007 n.231, tenuto in modalità cartaceo o informatico con relative schede di identificazione del cliente: \begin{math}\square\end{math} SI \begin{math}\square\end{math} NO
+\\\\
+Alla parte viene chiesto di esibire gli scontrini di gioco annullati e/o vincenti elencati nella tabella  A e B che costituiscono parte integrante del presente verbale. \\
+A seguito della richiesta:
+\begin{enumerate}[label={\begin{math}\square\end{math}}]
+    \item la parte non esibisce alcuna documentazione richiesta in quanto:
+    \begin{enumerate}
+        \item \begin{math}\square\end{math} non è tenuta in ordine cronologico e non è in grado di fornirla in sede di accesso;
+        \item \begin{math}\square\end{math} è stata consegnata al Concessionario;
+        \item \begin{math}\square\end{math} altro: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+        \\
+        Pertanto si invita la parte e /o il TITOLARE DELLA RACCOLTA SCOMMESSE  a trasmettere a questo Ufficio la documentazione sopra indicata entro 15 giorni ai sensi dell’art. 51 comma 2 punto 4 del D.P.R. n. 633/1972. Nel caso in cui non sia dato seguito all’invito a esibire la documentazione richiesta, quest’Ufficio procederà all’irrogazione della sanzione amministrativa prevista dall’articolo 11, comma 1, lett. c), del D.Lgs. 19 dicembre 1997 n. 471, così come richiamato dall’art. 5 del suddetto D.Lgs. n. 504 del 1998.
+    \end{enumerate}
+    \item La parte esibisce la documentazione richiesta o parte di essa così come  riepilogata nello sottostante tabella:
+
+
+    \begin{tabularx}{\linewidth}{|l| Y | Y | Y | Y |}
+        \hline
+        \multicolumn{5}{|c|}{\textbf{PERIODO CONTABILE DAL var AL var}} \\
+        \hline
+        & Previsti & Totali & Verificati & Mancanti \\
+        \hline
+        ANNULLATI & var &  &  & \\
+        \hline
+        PAGATI & var &  &  & \\
+        \hline
+        RIMBORSATI & var &  &  & \\
+        \hline
+    \end{tabularx}
+\end{enumerate}
+
+Si dà atto, inoltre, di aver effettuato alla costante presenza della parte, i seguenti rilievi:
+\begin{enumerate}[label={}]
+    \item \textbf{INSEGNA/VETRINA ESTERNA} \\
+        L'insegna/vetrina esterna reca la dicitura: \\
+        \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    \item \textbf{DESCRIZIONE DEL LOCALE}
+    \begin{enumerate}
+        \item Ubicazione dell'esercizio commerciale: piano terra con n. \_\_\_\_\_\_\_\_\_\_ ingressi.
+        \item Superficie mq: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+        \item Frontend evidenziato dalla segnaletica, dal materiale pubblicitario e promozionale:
+            \begin{math}\square\end{math} SI \begin{math}\square\end{math} NO
+        \item Frontend + backend dedicate al gioco maggiore/uguale al 50\% della superficie totale:             \\\begin{math}\square\end{math} SI
+            \begin{math}\square\end{math} NO
+        \item Spazi fisicamente distinti tra attività "principale" e attività "accessoria":
+            \begin{math}\square\end{math} SI
+            \begin{math}\square\end{math} NO
+        \item Back end del gioco fisicamente separato dal front end del gioco:
+            \begin{math}\square\end{math} SI
+            \begin{math}\square\end{math} NO
+    \end{enumerate}
+
+    \item \textbf{DOTAZIONE}\\
+        Il \textbf{punto di raccolta} è dotato di:
+        \begin{enumerate}
+            \item numero \_\_\_\_\_ \textbf{terminali di gioco}, di cui n. \_\_\_\_\_ con lettore di ricevute di partecipazione; (almeno 2)
+            \item n. \_\_\_\_\_ monitor; (almeno 1 solo per punto sportivo) n. \_\_\_\_\_ virtual;
+            \item n. \_\_\_\_\_ televisori; (almeno 1) n. \_\_\_\_\_ virtual;
+            \item n. \_\_\_\_\_ prenotatori;
+            \item n. \_\_\_\_\_ terminali self service;
+            \item POS:
+                \begin{math}\square\end{math} SI
+                \begin{math}\square\end{math} NO
+                 postazioni n. \_\_\_\_\_;
+        \end{enumerate}
+        \item \textbf{FINALITÀ}
+        \begin{enumerate}
+            \item La commercializzazione dei giochi pubblici, come riscontrabile in relazione a organizzazione, attività e risorse,
+            \begin{math}\square\end{math} È \begin{math}\square\end{math} NON È largamente prevalente
+        \end{enumerate}
+
+        \item \textbf{MATERIALE ESPOSTO NEL NEGOZIO DI GIOCO}
+        \begin{itemize}[label={\begin{math}\square\end{math}}]
+            \item Esposizione dei regolamenti di gioco;
+            \item Esposizione del logo di AAMS e del logo "gioco legale e responsabile";
+            \item Esposizione del codice identificativo della concessione;
+            \item Visualizzazione dei palinsesti e delle quote;
+            \item Esposizione del divieto di gioco ai minori;
+            \item Esposizione del divieto di ingresso ai minori;
+            \item Esposizione delle formule di avvertimento sul rischio di dipendenza della pratica dei giochi con vincite in denaro, ai sensi dell'art. 7 comma 5 del D.L. n°158 del 13/09/2012.
+        \end{itemize}
+
+        \item \textbf{PRESENZA DI MINORI}
+        \begin{enumerate}
+            \item Presenza di minori di anni 18 in aree destinate al gioco con vincite in denaro di cui all’art. 7 comma 8 del D.L. n. 158/2012  - Sale dedicate VLT, Sale bingo, Agenzie e negozi in cui si esercita come attività principale la raccolta di scommesse su eventi sportivi, ippici e non sportivi.
+            \begin{enumerate}[label={\begin{math}\square\end{math}}]
+                \item NO
+                \item SI, si constata che alle ore \_\_\_\_\_\_.\_\_\_\_\_\_, una persona minore di anni 18, identificata con separato atto, era presente all'interno dell'esercizio commerciale controllato, e precisamente nel locale \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ e nell'area adibita al gioco di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_. Pertanto al titolare dell’esercizio pubblico sarà contestata, con atto separato, la violazione delle norme previste dall’art. 7, comma 8 del D.L. n. 158 del 13/09/2012, sanzionata dall’art. 24, commi 21 e 22 del D.L. n. 98/2011.
+            \end{enumerate}
+            \item Partecipazione al gioco pubblico con vincita in denaro di minori di anni 18 di cui all’art. 24 comma 20 del D.L. n. 98/2011.
+            \begin{enumerate}[label={\begin{math}\square\end{math}}]
+                \item NO
+                \item SI, si constata che alle ore \_\_\_\_\_\_.\_\_\_\_\_\_, una persona minore di anni 18, identificata con separato atto, era intento al gioco di\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+                con apparecchio VLT identificato n. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+                al quale veniva rilasciata la ricevuta di gioco n. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+                \\Pertanto al titolare dell’esercizio pubblico sarà contestata, con atto a parte, la violazione delle norme previste dall’art. 24 comma 20 del D.L. n. 98/2011 convertito in L. n. 111/2011, sanzionata dall’art. 24 commi 21 e 22 dello stesso D.L. n.98/2011.
+            \end{enumerate}
+
+        \end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}
+    \textbf{Dichiarazioni della parte}
+\end{center}
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\begin{center}
+    \textbf{Dichiarazioni dei verbalizzanti}
+\end{center}
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\newpage
+
+Si dà atto che durante le operazioni di verifica, svoltesi con la continua assistenza della parte, non sono stati arrecati danni né agli apparecchi oggetto di controllo né ai beni mobili e immobili, che nulla è stato asportato e che la parte non ha nulla da lamentare sull’operato dei verbalizzanti.\\
+Si dà atto, altresì, che le operazioni si sono protratte per il tempo strettamente necessario allo svolgimento delle stesse, ed hanno avuto termine alle ore \_\_\_\_\_\_.\_\_\_\_\_\_ dello stesso giorno.\\
+Il presente atto, che si compone di n° 8 facciate e n° \_\_\_\_\_\_ allegati, è redatto in n° 2 originali, uno per l’Ufficio dei Monopoli per le Marche dell’Agenzia delle Dogane e dei Monopoli - Sede di Pesaro, ed uno per la parte.\\
+Il verbale, letto e confermato senza ulteriori osservazione ed eccezione di sorta, viene sottoscritto dai funzionari verbalizzanti e dalla parte, a cui si rilascia copia.
+
+Allegati:
+\begin{itemize}[label={}]
+    \item \begin{math}\square\end{math} Allegato A \begin{math}\square\end{math} Allegato B \begin{math}\square\end{math} Allegato C \begin{math}\square\end{math} Documentazione fotografica
+    \item \begin{math}\square\end{math} Letture \begin{math}\square\end{math} Altro \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+Recapiti per l'invio di eventuale documentazione:
+\begin{itemize}[label={}]
+    \item EMAIL: monopoli.marche.urp@adm.gov.it
+    \item PEC: monopoli.ancona@pec.adm.gov.it
+\end{itemize}
+
+\signature
+
+
+\end{document}

@@ -1,0 +1,322 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, top=2cm, bottom=3cm, left=1cm, right=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{lastpage}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\newcommand\npuntoraccolta{$npuntoraccolta}
+\newcommand\nconcessione{$nconcessione}
+\newcommand\denominazioneEsercizio{$denominazioneEsercizio}
+\newcommand\indirizzoEsercizio{$indirizzoEsercizio}
+\newcommand\picfAttivita{$picfAttivita}
+\newcommand\denominazioneEsercente{$denominazioneEsercente}
+\newcommand\verbalizzanteuno{$verbalizzante1}
+\newcommand\verbalizzantedue{$verbalizzante2}
+\newcommand\verbalizzantetre{$verbalizzante3}
+\newcommand\ordineDiServizio{$ordineDiServizio}
+\newcommand\annoIscrizione{$annoIscrizione}
+\newcommand\dataVerifica{$dataVerifica}
+\newcommand\titoloAutorizzatorio{$titoloAutorizzatorio}
+\newcommand\dataTitoloAutorizzatorio{$dataTitoloAutorizzatorio}
+\newcommand\nRivendita{$nRivendita}
+\newcommand\localitaRivendita{$localitaRivendita}
+\newcommand\nLotto{$nLotto}
+\newcommand\comuneEsercizio{$comuneEsercizio}
+
+\newcommand\signature{%
+  \par\vspace{8ex}\noindent
+  \begin{tabular}[t]{@{}c@{}}
+    I VERBALIZZANTI\\ \\
+    \makebox[15em]{\dotfill}\\
+    \\
+    \makebox[15em]{\dotfill}\\
+    \\
+    \makebox[15em]{\dotfill}
+  \end{tabular}
+  \hfill
+  \begin{tabular}[t]{@{}c@{}}
+    LA PARTE\\ \\
+    \makebox[15em]{\dotfill}
+  \end{tabular}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{1.5cm}
+\lhead{\includegraphics[height=1cm]{logo-adm.jpg}}
+% DA CAMBIARE
+\rhead{\scriptsize{Segue processo verbale di constatazione nei confronti della}\\\scriptsize{rivendita n. \nRivendita in \comuneEsercizio}\\\scriptsize{redatto in data \dataVerifica}}
+\cfoot{Pagina \thepage \hspace{1pt} di \pageref{LastPage}}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               FRONTESPIZIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{logo-adm.jpg}
+    \caption*{Ufficio dei Monopoli per le Marche\\Sezione distaccata di Pesaro}
+    \label{fig:logoadm}
+\end{figure}
+
+{\centering
+    \textbf{PROCESSO VERBALE DI CONSTATAZIONE - ACCERTAMENTO}
+    \par
+}
+
+\begin{tabularx}{\linewidth}{|c|X|}
+   \hline
+    \multirowcell{10}{DATI \\ ESERCIZIO} & \\ & Denominazione: \denominazioneEsercizio \\ & Indirizzo: \indirizzoEsercizio \\ &  P.IVA/C.F.: \picfAttivita \\ & Titolare: \denominazioneEsercente \\& Telefono: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Orari: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Apertura domenicale: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Giorno di chiusura: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
+    \hline
+    \multirowcell{4}{OGGETTO\\DELLA\\VERIFICA} & \\ & RIVENDITA N. \nRivendita \\ & RICEVITORIA LOTTO N. \nLotto  \\ & \\
+    \hline
+    \multirowcell{10}{ANAGRAFICA\\ DELLA \\ PARTE} & \\ & COGNOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ NOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & NATO A: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IL: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & RESIDENTE IN: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & INDIRIZZO: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Identificato a mezzo \begin{math}\;\square\end{math} carta d'identità \begin{math}\;\square\end{math} patente di guida \begin{math}\;\square\end{math} altro \\ & rilasciato/a da \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ scadente il \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & IN QUALITÀ DI: \\ &\begin{math}\square\end{math} titolare/legale rappresentante  \begin{math}\square\end{math} dipendente \begin{math}\square\end{math} Altro\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
+    \hline
+    \multirowcell{7}{AGENZIA DELLE\\DOGANE\\E DEI MONOPOLI\\ \scriptsize{Ufficio dei Monopoli per}\\ \scriptsize{le Marche}\\ \scriptsize{Sede di Pesaro}} & \\ & Verbalizzante: \verbalizzanteuno \\ & \\ & Verbalizzante: \verbalizzantedue \\ & \\ & Verbalizzante: \verbalizzantetre  \\ & \\
+    \hline
+\end{tabularx}
+
+
+Data verifica: \dataVerifica \\
+Inizio verifica: \_\_\_\_\_\_.\_\_\_\_\_\_.
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               CONTENUTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In data odierna \dataVerifica, alle ore \_\_\_\_\_.\_\_\_\_\_, i sopracitati dipendenti, funzionari dell'Agenzia delle Dogane e dei Monopoli – Ufficio dei Monopoli per le Marche, Sede di Pesaro, hanno eseguito un sopralluogo presso la rivendita sopra indicata, nell’ambito delle prerogative di cui all’art. 79 del D.P.R. 1074/58, in esecuzione dell’ordine di servizio \ordineDiServizio.
+
+
+Dopo aver dimostrato la propria identità mediante esibizione delle tessere di servizio i funzionari ADM hanno reso edotta la parte sullo scopo della visita e precisamente: accertare che la rivendita venga gestita in conformità
+\begin{multicols}{2}
+\begin{itemize}
+    \item alla Legge 1293/57;
+    \item al Regolamento approvato con Decreto del Presidente della Repubblica 1074/58;
+    \item al Capitolato d'oneri;
+    \item al divieto di vendita dei tabacchi ai minori di anni diciotto;
+    \item alle altre disposizioni emanate dall'Agenzia delle Dogane e dei Monopoli.
+\end{itemize}
+\end{multicols}
+
+\textbf{Viene verificato quanto segue:}
+
+\begin{tabularx}{\textwidth}{|p{15cm}|Y|Y|}
+    \hline
+    1. la rivendita è regolarmente funzionante nei locali autorizzati dall’Agenzia (art. 78 del D.P.R. 1074/58) & SÌ & NO \\
+    \hline
+    2. il personale presente in rivendita è regolarmente autorizzato (art. 64 del D.P.R. 1074/58) & SÌ & NO \\
+    \hline
+    3.	la rivendita è rifornita di tabacchi lavorati in quantità adeguata alle esigenze di consumo (art. 15 lettera a del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    4.	la rivendita è rifornita di  biglietti delle lotterie nazionali ad estrazione differita (art. 15 lettera b del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    5.	la mostra dei tabacchi è adeguata e garantisce la neutralità dell’offerta (art. 9 del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    6.	i tabacchi lavorati sono venduti nei condizionamenti usuali presenti in commercio (art. 15 del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    7.	i generi di monopolio sono custoditi e venduti esclusivamente nei locali e nei luoghi per i quali è il rivenditore è stato autorizzato (art 7 del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    8.	la vendita dei tabacchi non è associata o condizionata alla consegna all’acquirente di gadget e omaggi  e non sono esposti prodotti, materiali od oggettistica di qualsiasi genere che, anche in modo indiretto, costituiscano richiamo a qualsiasi marchio di prodotto da fumo (art. 17, lettera b e d, del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    9.	sono tenute in vista all’interno della rivendita la licenza di esercizio e la tariffa dei prezzi di vendita dei generi di monopolio (art. 9 del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    10.	il distributore automatico di sigarette è dotato di sistema automatico di rilevamento dell’età anagrafica dell’acquirente ed eroga prodotti tramite lettura  automatica dei documenti anagrafici rilasciati dalla  pubblica amministrazione (come previsto dalla vigente normativa) & SÌ & NO \\
+    \hline
+    11.	la vendita di valori postali e bollati è regolare (art 15 del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    12.	l’insegna fuori del locale è esposta in posizione ben visibile al pubblico (art. 9 del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    13.	i generi di monopolio pervengono direttamente, con regolare bolletta, dall’organo di rifornimento prescritto dall’Agenzia (art. 16, lettera d, del capitolato d’oneri) & SÌ & NO \\
+    \hline
+    14.	la rivendita rifornisce il patentino n. \_\_\_\_\_\_\_\_\_\_\_ come da copie bollettario Mod U/88/Pat regolarmente custodite (art. 14 del capitolato d’oneri) & SÌ & NO \\
+    \hline
+\end{tabularx}
+\begin{tabularx}{\textwidth}{|p{15cm}|Y|Y|}
+    \hline
+    15. gli scontrini vincenti e pagati , validati manualmente, annullati, e prenotati del lotto, 10elotto e Millionday degli ultimi sei mesi (determina n. 45593 del 04/05/17) sono regolarmente custoditi presso la rivendita & SÌ & NO \\
+    \hline
+    16. all’atto dell’accesso  non è stata riscontrata la violazione del divieto di vendita dei tabacchi a minori di anni 18 & SÌ & NO \\
+    \hline
+    17. all’atto dell’accesso  non è  stata riscontrata la violazione del divieto di partecipazione ai giochi con vincita in denaro ai minori di anni 18& SÌ & NO \\
+    \hline
+    18. sono regolarmente esposti i cartelli di divieto della vendita di tabacchi ai minori di anni 18 & SÌ & NO \\
+    \hline
+    19. sono regolarmente esposti i cartelli di divieto di partecipazione ai giochi con vincita in denaro ai minori di anni 18 come prescritto dal comma 5 art. 7 del D.L. n. 158/2012 & SÌ & NO \\
+    \hline
+    20. Sono presenti prodotti accessori da fumo & SÌ & NO \\
+    \hline
+    20bis. Si allega copia documento di acquisto dei prodotti accessori da fumo& SÌ & NO \\
+    \hline
+
+\end{tabularx}
+
+\paragraph{VERIFICA DEL LOTTO}
+
+\begin{itemize}
+    \item Settimana contabile lotto controllata dal \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_\_\_\_\_ al \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_\_\_\_\_.
+    \\Verificati:
+    \begin{itemize}
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini vincenti
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini vincenti validati manualmente
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini annullati
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini prenotati
+    \end{itemize}
+    \item Settimana/giornata contabile 10 e lotto controllata dal \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_\_\_\_\_ al \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_\_\_\_\_.
+    \\Verificati:
+    \begin{itemize}
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini vincenti
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini vincenti validati manualmente
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini annullati
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini prenotati
+    \end{itemize}
+    \item Settimana/giornata contabile Millionday controllata dal \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_\_\_\_\_ al \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_\_\_\_\_.
+    \\Verificati:
+    \begin{itemize}
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini vincenti
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini vincenti validati manualmente
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini annullati
+        \item n. \_\_\_\_\_\_\_\_\_ scontrini prenotati
+    \end{itemize}
+    \item nella ricevitoria sono in funzione n. \_\_\_\_\_\_\_\_\_ terminali lotto;
+    \item personale autorizzato ai sensi art. 28 L. 1293/57 - presente al momento della verifica: \\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+\paragraph{VERIFICA AUTENTICITÀ DEI CONTRASSEGNI} In ottemperanza alle circolari, prot. n. DAC/CTL/11405/2012 del 26/07/2012 e prot. n. DAC/DIR/868/2012 del 16/11/2012, i verbalizzanti hanno effettuato le sotto indicate prove, finalizzate ad accertare l’autenticità dei contrassegni di Stato di cui al D. D. 23/06/2011, utilizzando il lettore \textbf{HD20}, matricola \textbf{PAG 521}:
+
+\begin{tabularx}{\textwidth}{|p{.15\textwidth}|p{.45\textwidth}|p{.1\textwidth}|Y|}
+    \hline
+    Codice & Denominazione & n. pacchetti & Esito (regolare, irregolare, impossibile per presenza vecchio contrassegno)  \\
+    \hline
+     & & & \\[20pt]
+    \hline
+     & & & \\[20pt]
+    \hline
+     & & & \\[20pt]
+    \hline
+     & & & \\[20pt]
+    \hline
+     & & & \\[20pt]
+    \hline
+     & & & \\[20pt]
+    \hline
+\end{tabularx}
+
+Vista l’irregolarità riscontrata su n. \_\_\_\_\_\_\_\_\_\_\_\_ confezioni di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ marca \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ codice  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ i verbalizzanti hanno provveduto a dare immediata comunicazione  del fatto alla Guardia di Finanza con richiesta di intervento tramite il n. 117.  In esito alla richiesta la Guardia di Finanza \\
+\begin{math}\square\end{math} È \begin{math}\square\end{math} NON È\\
+intervenuta ed ha emesso apposito verbale  di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+
+
+
+\paragraph{LOTTERIE AD ESTRAZIONE ISTANTANEA}
+Ai fini delle attività di controllo, previste dall’\textbf{art. 25} della \textit{Convenzione per il rapporto di concessione dell’esercizio dei giochi pubblici denominati lotterie nazionali ad estrazione istantanea} nonché dall’\textbf{art. 11} del \textit{Contratto di autorizzazione all’esercizio dell’attività di vendita dei biglietti delle lotterie nazionali ad estrazione istantanee}, i verbalizzanti\\
+\begin{math}\square\end{math} HANNO \begin{math}\square\end{math} NON HANNO\\
+constatato che all’interno dei locali del predetto esercizio sono posti in vendita biglietti delle \textbf{lotterie ad estrazione istantanea}.\\
+L'esame visivo dei suddetti biglietti posti in vendita risulta:
+\begin{itemize}[label={\begin{math}\square\end{math}}]
+    \item REGOLARE: biglietti integri, non contraffatti, relativi a concorsi autorizzati e non dichiarati cessati;
+    \item NON REGOLARE: viene redatto il \textit{Verbale A)} di constatazione (allegato);\\ viene redatto il \textit{Verbale B)} di constatazione e comunicazione di notizia di reato ai sensi dell'art. 331 c.p.p. (allegato).\\
+    Nel caso di riscontrata irregolarità, si ordina al titolare del punto vendita di ritirare immediatamente dalla vendita i biglietti di cui all’allegato Verbale A) – B) e custodirli al fine di consentire l’effettuazione delle necessarie verifiche da parte del concessionario e/o dell’organo giudiziario competente.
+\end{itemize}
+
+\paragraph{GIOCHI NUMERICI A TOTALIZZATORE NAZIONALE}
+In ottemperanza alla circolare prot. n. 19039 del 12/02/2018 è stata controllata l’esistenza di terminali per giochi numerici a totalizzatore nazionale (GNTN) ed efficienza operativa degli stessi:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item terminali presenti: \begin{math}\square\end{math} SÌ \begin{math}\square\end{math} NO
+        \item terminali operativi: \begin{math}\square\end{math} SÌ \begin{math}\square\end{math} NO
+    \end{itemize}
+\end{multicols}
+
+\paragraph{VERIFICA SUCCEDANEI DEL TABACCO} Fatto divieto di vendita di prodotti o sostanze atte a surrogare i tabacchi, salvo deroga per i liquidi da inalazione, secondo l'Art. 16 del Capitolato d'oneri(obblighi del rivenditore derivanti dal rapporto di concessione). Si verifica:
+\begin{itemize}
+    \item Disponibilità di prodotti atti a surrogare i tabacchi: \begin{math}\square\end{math} SÌ \begin{math}\square\end{math} NO
+    \item Riscontrata presenza di cannabis light in foglia, infiorescenza, olio o resina \begin{math}\square\end{math} SÌ \begin{math}\square\end{math} NO
+\end{itemize}
+
+
+
+Le eventuali irregolarità sopra accertate costituiscono violazione sanzionabile a norma dell’art. 7 della Legge 8 novembre 2012 n. 189 e della Legge n. 1293/1957 che saranno oggetto di successiva contestazione nei termini previsti dalle disposizioni vigenti.
+\begin{multicols}{2}
+    \begin{math}\square\end{math} REGOLARE \\
+    \begin{math}\square\end{math} IRREGOLARE
+\end{multicols}
+
+
+
+
+
+
+
+
+\begin{center}
+    \textbf{Dichiarazioni della parte}
+\end{center}
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\begin{center}
+    \textbf{Dichiarazioni dei verbalizzanti}
+\end{center}
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+
+\textit{\textbf{Per le eventuali irregolarità l'Ufficio si riserva ogni doverosa e opportuna azione amministrativa con successivi atti.}}
+
+
+Si dà atto che durante le operazioni di verifica, svoltesi con la continua assistenza della parte, non sono stati arrecati danni né agli apparecchi oggetto di controllo né ai beni mobili e immobili, che nulla è stato asportato e che la parte non ha nulla da lamentare sull’operato dei verbalizzanti.\\
+Si dà atto, altresì, che le operazioni si sono protratte per il tempo strettamente necessario allo svolgimento delle stesse, ed hanno avuto termine alle ore \_\_\_\_\_\_.\_\_\_\_\_\_ dello stesso giorno.\\
+Il presente atto, che si compone di n. 6 facciate e n° \_\_\_\_\_\_ allegati, è redatto in n° 2 originali, uno per l’Ufficio dei Monopoli per le Marche dell’Agenzia delle Dogane e dei Monopoli - Sede di Pesaro, ed uno per la parte.\\
+Il verbale, letto e confermato senza ulteriori osservazioni ed eccezione di sorta, viene sottoscritto dai funzionari verbalizzanti e dalla parte, a cui si rilascia copia.\\
+
+
+Allegati:
+\begin{itemize}[label={}]
+    \item \begin{math}\square\end{math} Allegato A \begin{math}\square\end{math} Allegato B \begin{math}\square\end{math} Allegato C \begin{math}\square\end{math} Documentazione fotografica
+    \item \begin{math}\square\end{math} Letture \begin{math}\square\end{math} Altro \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+Recapiti per l'invio di eventuale documentazione:
+\begin{itemize}[label={}]
+    \item EMAIL: monopoli.marche.urp@adm.gov.it
+    \item PEC: monopoli.ancona@pec.adm.gov.it
+\end{itemize}
+
+\signature
+
+
+\end{document}

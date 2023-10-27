@@ -1,0 +1,352 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, top=2cm, bottom=3cm, left=1cm, right=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{lastpage}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\newcommand\npuntoraccolta{$npuntoraccolta}
+\newcommand\nconcessione{$nconcessione}
+\newcommand\denominazioneEsercizio{$denominazioneEsercizio}
+\newcommand\indirizzoEsercizio{$indirizzoEsercizio}
+\newcommand\picfAttivita{$picfAttivita}
+\newcommand\denominazioneEsercente{$denominazioneEsercente}
+\newcommand\verbalizzanteuno{$verbalizzante1}
+\newcommand\verbalizzantedue{$verbalizzante2}
+\newcommand\verbalizzantetre{$verbalizzante3}
+\newcommand\ordineDiAccesso{$ordineDiAccesso}
+\newcommand\annoIscrizione{$annoIscrizione}
+\newcommand\dataVerifica{$dataVerifica}
+\newcommand\titoloAutorizzatorio{$titoloAutorizzatorio}
+\newcommand\dataTitoloAutorizzatorio{$dataTitoloAutorizzatorio}
+\newcommand\nRivendita{$nRivendita}
+
+\newcommand\signature{%
+  \par\vspace{8ex}\noindent
+  \begin{tabular}[t]{@{}c@{}}
+    I VERBALIZZANTI\\ \\
+    \makebox[15em]{\dotfill}\\
+    \\
+    \makebox[15em]{\dotfill}\\
+    \\
+    \makebox[15em]{\dotfill}
+  \end{tabular}
+  \hfill
+  \begin{tabular}[t]{@{}c@{}}
+    LA PARTE\\ \\
+    \makebox[15em]{\dotfill}
+  \end{tabular}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{1.5cm}
+\lhead{\includegraphics[height=1cm]{logo-adm.jpg}}
+% DA CAMBIARE
+\rhead{\scriptsize{Segue processo verbale di accesso e operazioni compiute}\\\scriptsize{nei confronti di \denominazioneEsercente}\\\scriptsize{redatto in data \dataVerifica}}
+\cfoot{Pagina \thepage \hspace{1pt} di \pageref{LastPage}}
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               FRONTESPIZIO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{logo-adm.jpg}
+    \caption*{Ufficio dei Monopoli per le Marche\\Sezione distaccata di Pesaro}
+    \label{fig:logoadm}
+\end{figure}
+
+{\centering
+    \textbf{PROCESSO VERBALE DI ACCESSO ED OPERAZIONI COMPIUTE}
+    \par
+}
+
+\begin{tabularx}{\linewidth}{|c|X|}
+   \hline
+    \multirowcell{9}{DATI \\ ESERCIZIO} & \\ & Denominazione: \denominazioneEsercizio \\ & Indirizzo: \indirizzoEsercizio \\ &  P.IVA/C.F.: \picfAttivita \\ & Titolare: \denominazioneEsercente \\& Telefono: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Orari: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Tipologia: \\ &\begin{math}\square\end{math} Esercizio di vicinato \begin{math}\square\end{math} Farmacia \begin{math}\square\end{math} Parafarmacia \begin{math}\square\end{math} Rivendita N.\nRivendita\\ & \\
+    \hline
+    \multirowcell{5}{OGGETTO\\DELLA\\VERIFICA} & \\ & CONFORMITÀ ALLA NORMATIVA VIGENTE \\ & DI ESERCIZI CON VENDITA\\ & DI PRODOTTI LIQUIDI DA INALAZIONE (P.L.I.) \\ & \\
+    \hline
+    \multirowcell{10}{ANAGRAFICA\\ DELLA \\ PARTE} & \\ & COGNOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ NOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & NATO A: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IL: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & RESIDENTE IN: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & INDIRIZZO: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Identificato a mezzo \begin{math}\;\square\end{math} carta d'identità \begin{math}\;\square\end{math} patente di guida \begin{math}\;\square\end{math} altro \\ & rilasciato/a da \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ scadente il \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & IN QUALITÀ DI: \\ &\begin{math}\square\end{math} titolare/legale rappresentante  \begin{math}\square\end{math} dipendente \begin{math}\square\end{math} Altro\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
+    \hline
+    \multirowcell{7}{AGENZIA DELLE\\DOGANE\\E DEI MONOPOLI\\ \scriptsize{Ufficio dei Monopoli per}\\ \scriptsize{le Marche}\\ \scriptsize{Sede di Pesaro}} & \\ & Verbalizzante: \verbalizzanteuno \\ & \\ & Verbalizzante: \verbalizzantedue \\ & \\ & Verbalizzante: \verbalizzantetre  \\ & \\
+    \hline
+\end{tabularx}
+
+
+Data verifica: \dataVerifica \\
+Inizio verifica: \_\_\_\_\_\_.\_\_\_\_\_\_.
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               CONTENUTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In data odierna \dataVerifica, alle ore \_\_\_\_\_.\_\_\_\_\_, i sopracitati dipendenti, funzionari dell'Agenzia delle Dogane e dei Monopoli – Ufficio dei Monopoli per le Marche, Sede di Pesaro, ai sensi delle disposizioni:
+\begin{itemize}
+    \item Decreto Legislativo 30 marzo 2001, n. 165;
+    \item Decreto Legislativo 26 ottobre 1995, n. 504;
+    \item Decreto Legislativo 12 gennaio 2016, n. 6;
+    \item DM 29 dicembre 2014;
+    \item Nota ADM Direzione Tabacchi prot.n. 27030 del 09.08.2019;
+    \item Determinazione Direttoriale prot. n. 92923/RU del 29.03.2021;
+    \item Determinazione Direttoriale prot. n. 93445/RU del 29.03.2021;
+    \item D.D. 297136/RU del 07/06/2023.
+\end{itemize}
+hanno effettuato, in esecuzione dell’ordine d’accesso \ordineDiAccesso, all’uopo conferito dal Dirigente dell’Ufficio in intestazione e ai sensi dell’art.18 del D.Lgs. 504/95 (Testo Unico delle Accise), una verifica presso l’esercizio di vicinato/farmacia/parafarmacia/rivendita sopra rubricato.
+
+Dopo aver dimostrato la propria identità mediante esibizione delle tessere di servizio i funzionari ADM hanno reso edotta la parte sullo scopo dell’accesso e della facoltà di farsi assistere da un professionista abilitato alla difesa dinanzi agli organi di giustizia tributaria, nonché dei diritti e degli obblighi che vanno riconosciuti al contribuente in occasione delle verifiche ai sensi dello Statuto del Contribuente (L. n. 212/2000).\\
+La parte dichiara di essere stata informata delle ragioni che hanno determinato la verifica, dell’oggetto che la riguarda, nonché, in applicazione della legge n. 212/2000 (Statuto dei diritti del Contribuente), sono stati dichiarati i diritti del contribuente in occasione delle verifiche fiscali, di seguito riepilogati:
+\begin{itemize}
+    \item assistere personalmente a tutte le operazioni di verifica;
+    \item farsi assistere da un professionista abilitato alla difesa dinanzi agli organi di giustizia tributaria;
+    \item richiedere che l’esame dei documenti amministrativi e contabili sia effettuato negli uffici dei verificatori o presso il professionista che l’assiste o che la rappresenta;
+    \item muovere rilievi o formulare osservazioni in relazione alle operazioni di controllo eseguite delle quali deve esserne dato atto nel verbale di verifica;
+    \item rivolgersi al garante del contribuente, nei casi in cui ritenga che i verificatori stiano procedendo con modalità non conformi alla legge;
+    \item rappresentare osservazioni e richieste all’Ufficio, entro 60 giorni dalla notifica del processo verbale di constatazione redatto a conclusione dell’intervento;
+    \item esercitare ogni altro diritto previsto dalla legislazione tributaria vigente.
+\end{itemize}
+La informavano, inoltre, dei doveri del contribuente durante la verifica:
+\begin{itemize}
+    \item di consentire l’accesso nei locali destinati alla propria attività;
+    \item di esibire, a richiesta dei verificatori, libri, registri, scritture e documenti;
+    \item di presentare i prodotti ad ogni richiesta ed a sottoporsi a controlli o accertamenti;
+    \item di consentire l’ispezione alle scritture contabili e dei documenti la cui tenuta e conservazione sono obbligatorie per legge o dei quali risulta l’esistenza;
+    \item secondo quanto disposto dall’art. 52 del D.P.R. n. 633/1972, così come richiamato dall’art. 15 comma 8-duodecies del D.L. n. 78/2009 conv. L. n. 102/2009, i libri, i registri, le scritture e i documenti di cui venga rifiutata l’esibizione non potranno essere presi in considerazione a favore della parte, ai fini dell’accertamento in sede amministrativa e contenziosa; per rifiuto di esibizione si intendono anche le dichiarazioni di non possedere libri, registri, documenti e scritture e/o la sottrazione di essi al controllo;
+    \item rifiutare l’esibizione o comunque impedire l’ispezione delle scritture contabili e dei documenti la cui tenuta e conservazione sono obbligatorie per legge o delle quali risulta l’esistenza, determina l’applicabilità della sanzione prevista dall’art. 11 comma 1 lett. c) del D.lgs. n. 471/1997, da € 258,00 a € 2065,00, qualora il fatto non costituisca più grave reato.
+\end{itemize}
+Riguardo alla facoltà di farsi assistere da un professionista abilitato alla difesa avanti la giurisdizione tributaria, la parte dichiara:
+\\ \begin{math}\square\end{math} CHE NON INTENDE AVVALERSENE
+\\ \begin{math}\square\end{math} CHE INTENDE AVVALERSENE, nella persona del Sig./Dr./Avv. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ che contestualmente viene avvisato telefonicamente dalla parte, e che interviene alle ore \_\_\_\_\_.\_\_\_\_\_.
+\\ \\
+\paragraph{LA VERIFICA È TESA AD ACCERTARE:}
+\begin{enumerate}
+    \item per gli esercizi di vicinato/farmacie/parafarmacie, il possesso dell’autorizzazione di cui all’articolo 62 - quater, comma 5-bis, del decreto legislativo 26 ottobre 1995, n. 504, e successive modificazioni;
+    \item per le rivendite tabacchi, il possesso della licenza di cui alla Legge 1293/57;
+    \item la presenza del titolare o di un delegato alla gestione;
+    \item che fuori dal locale destinato alla vendita e in posizione ben visibile al pubblico sia stata apposta l’insegna di cui all’articolo 4, comma 8 della Determinazione Direttoriale prot. n. 92923/RU del 29.03.2021;
+    \item il rispetto del divieto di vendita di p.l.i. privi del contrassegno di legittimazione e delle avvertenze di cui all’articolo 62 quater, comma 3 bis, del decreto legislativo 26 ottobre 1995, n. 504;
+    \item che su ogni singolo confezionamento siano apposte le avvertenze sanitarie di cui al D.Lgs. 6/2016 e della Determinazione Direttoriale 93445/RU del 29.03.2021;
+    \item il rispetto del divieto di preparazione o confezionamento dei p.l.i. senza combustione costituiti da sostanze liquide, contenenti o meno nicotina;
+    \item che i prodotti liquidi da inalazione in vendita siano registrati per la commercializzazione ai sensi dell’art. 4 della determinazione direttoriale n. 83685 del 18.03.2021;
+    \item il rispetto del divieto di vendita ovvero di detenzione di foglie, infiorescenze, oli, resine o altri prodotti contenenti sostanze derivate dalla canapa sativa o comunque sostanze con efficacia drogante o psicotropa;
+    \item il rispetto del divieto di vendita ai minori dei prodotti da inalazione senza combustione costituiti da sostanze liquide, contenenti o meno nicotina;
+    \item qualora la vendita sia effettuata mediante distributori automatici, che gli stessi siano dotati di un sistema automatico di rilevamento dell'età anagrafica dell'acquirente;
+    \item che siano tenuti ovvero resi disponibili i documenti commerciali e contabili, gli ordini di fornitura ai sensi dell’articolo 9, comma 2, 3 e 4 e 5 della Determinazione Direttoriale prot. n. 92923/RU del 29.03.2021;
+    \item verificare la legittima provenienza dei prodotti liquidi da inalazione da un deposito autorizzato, obbligato al pagamento dell’imposta di consumo ai sensi della determinazione direttoriale prot.n. 83685/RU del 18.03.2021;
+    \item la corrispondenza dei dati contenuti nelle bollette rilasciate dai fornitori autorizzati rispetto alla tipologia dei prodotti rinvenuti in sede di controllo.
+\end{enumerate}
+
+\paragraph{ALL'ATTO DELL'ACCESSO VIENE RISCONTRATO QUANTO SEGUE:}
+
+\begin{enumerate}
+    \item Il titolare della farmacia/parafarmacia/esercizio di vicinato \begin{math}\square\end{math} \textbf{È} \begin{math}\square\end{math} \textbf{NON È} in possesso dell’autorizzazione di cui all’articolo 62 - quater, comma 5-bis, del decreto legislativo 26 ottobre 1995, n. 504, e successive modificazioni, n. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ del \_\_\_\_\_/\_\_\_\_\_/\_\_\_\_\_\_\_\_\_\_ rilasciata da \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_;
+    \item \begin{math}\square\end{math} \textbf{È} \begin{math}\square\end{math} \textbf{NON È} presente fuori dal locale l'insegna;
+    \item \begin{math}\square\end{math} \textbf{È} \begin{math}\square\end{math} \textbf{NON È} presente il titolare o un delegato alla gestione;
+    %% ?????
+    \item \begin{math}\square\end{math} \textbf{SONO} \begin{math}\square\end{math} \textbf{NON SONO} presenti minori di anni 18 cui viene consentito l’acquisto di prodotti da inalazione senza combustione costituiti da sostanze liquide contenenti o meno nicotina;
+    \item \begin{math}\square\end{math} \textbf{VIENE} \begin{math}\square\end{math} \textbf{NON VIENE} effettuata la preparazione o il confezionamento di prodotti liquidi da inalazione senza combustione costituiti da sostanze liquide, contenenti o meno nicotina;
+    \item \begin{math}\square\end{math} \textbf{SONO} \begin{math}\square\end{math} \textbf{NON SONO} vendute oppure di detenute foglie, infiorescenze, oli, resine o altri prodotti contenenti sostanze derivate dalla canapa sativa o comunque sostanze con efficacia drogante o psicotropa;
+    \item \begin{math}\square\end{math} \textbf{È} \begin{math}\square\end{math} \textbf{NON È} presente un distributore automatico di prodotti liquidi da inalazione in prossimità dell’esercizio per il quale viene verificato che l’erogazione dei prodotti, per il quale: \begin{math}\square\end{math} \textbf{È} \begin{math}\square\end{math} \textbf{NON È} disposta l’accertamento dell’età, superiore a 18 anni, dell’utente, mediante introduzione di una carta elettronica rilasciata da Pubblica Amministrazione;
+\end{enumerate}
+
+
+\newpage
+\paragraph{ESAME DEI CAMPIONI CON NICOTINA}
+
+Vengono esaminati a campione i seguenti prodotti che, dalla denominazione commerciale o da altri elementi desunti dalla confezione, risultano contenere nicotina:
+
+\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|Y|}
+    \hline
+    Denominazione della marca del prodotto & Capacità espressa in ml della confezione o del dispositivo monouso & Paese di origine della confezione & Ragione sociale e sede legale del produttore o dell'importatore stabilito nell'UE & Codice prodotto assegnato da ADM \\
+    \hline
+     & & & & \\[20pt]
+    \hline
+     & & & & \\[20pt]
+    \hline
+     & & & & \\[20pt]
+    \hline
+     & & & & \\[20pt]
+    \hline
+\end{tabularx}
+
+
+\paragraph{ESAME DEI CAMPIONI SENZA NICOTINA}Vengono esaminati a campione i seguenti prodotti che, dalla denominazione commerciale o da altri elementi desunti dalla confezione, risultano NON contenere nicotina:
+
+\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|Y|}
+    \hline
+    Denominazione della marca del prodotto & Capacità espressa in ml della confezione o del dispositivo monouso & Paese di origine della confezione & Ragione sociale e sede legale del produttore o dell'importatore stabilito nell'UE & Codice prodotto assegnato da ADM \\
+    \hline
+     & & & & \\[20pt]
+    \hline
+     & & & & \\[20pt]
+    \hline
+     & & & & \\[20pt]
+    \hline
+     & & & & \\[20pt]
+    \hline
+\end{tabularx}
+
+\newpage
+
+Considerando la responsabilità solidale tra il produttore e chi commercializza i prodotti liquidi da inalazione, dall’esame dei suddetti prodotti si riscontra quanto segue:\\
+I prodotti liquidi da inalazione, sia contenenti che non contenenti nicotina \\
+\begin{math}\square\end{math} RIPORTANO \begin{math}\square\end{math} NON RIPORTANO\\
+il contrassegno previsto dalla Determinazione Direttoriale prot. n. 93445/RU del 29/03/2021.\\
+In particolare, sono stati rinvenuti, esposti per la vendita, P.L.I. privi di contrassegno così suddivisi:
+\begin{enumerate}[label=\begin{math}\square\end{math}]
+    \item Con nicotina (n. \_\_\_\_\_\_\_\_\_ confezioni) - allegato \_\_\_\_\_\_\_\_\_;
+    \item Senza nicotina (n. \_\_\_\_\_\_\_\_\_ confezioni) - allegato \_\_\_\_\_\_\_\_\_;
+\end{enumerate}
+\\
+I P.L.I. privi di contrassegno\\
+\begin{math}\square\end{math} SONO \begin{math}\square\end{math} NON SONO\\
+della medesima tipologia di quelli esposti per la vendita aventi il contrassegno di legittimazione.\\
+I prodotti delle medesima tipologia di quelli aventi il contrassegno, quindi non pericolosi per la salute, non \\
+\begin{math}\square\end{math} RIPORTANO \begin{math}\square\end{math} NON RIPORTANO\\
+da depositi fiscali autorizzati, per i quali si presume l’assolvimento dell’imposta di consumo, sono stati rilasciati alla disponibilità della parte con la prescrizione di non porli in vendita, ammonendo la possibilità di recidiva di cui all’art. 5, lett. c) Det. Dir. N. 92923/RU del 29.03.2021.
+\\\\
+I documenti contabili \\
+\begin{math}\square\end{math} SONO DETENUTI \begin{math}\square\end{math} NON SONO DETENUTI\\
+presso l’esercizio e la parte si impegna pertanto a trasmettere, entro e non oltre \_\_\_\_\_\_\_\_\_\_  giorni dalla data del presente verbale, la seguente documentazione: \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\\
+I prodotti liquidi da inalazione, sia contenenti che non contenenti nicotina \\
+\begin{math}\square\end{math} RIPORTANO \begin{math}\square\end{math} NON RIPORTANO\\
+la denominazione e il contenuto dei prodotti da inalazione, la quantità di prodotto delle confezioni destinate alla vendita al pubblico (art. 6 D.Lgs 206/2015).\\
+In particolare, per i prodotti non contenti nicotina:\\
+\begin{math}\square\end{math} È \begin{math}\square\end{math} NON È\\
+riportato il testo “\textit{Il prodotto può contenere sostanze pericolose per la salute. Per info chiama il numero verde 800554088 dell’Istituto Superiore di Sanità}” (art. 5 Determinazione Direttoriale 93445/RU del 29 marzo 2021).\\
+In particolare, per i prodotti contenti nicotina:
+\begin{enumerate}
+    \item le confezioni unitarie \\
+    \begin{math}\square\end{math} RIPORTANO \begin{math}\square\end{math} NON RIPORTANO\\
+    il testo “\textit{Prodotto contenente nicotina, sostanza che crea un'elevata dipendenza. Uso sconsigliato ai non fumatori. Il prodotto può contenere sostanze pericolose per la salute. Per info chiama il numero verde 800554088 dell’Istituto Superiore di Sanità}” (art. 6 Determinazione Direttoriale 93445/RU del 29 marzo 2021)
+    \item le confezioni unitarie di sigarette elettroniche e di contenitori di liquidi \\
+    \begin{math}\square\end{math} SONO \begin{math}\square\end{math} NON SONO\\ corredate da un foglietto contenente il recapito del fabbricante o dell’importatore (art. 21, comma 8 D.Lgs 6/2016);
+    \item le confezioni unitarie di sigarette elettroniche e dei liquidi di ricarica e il loro eventuale imballaggio esterno\\
+    \begin{math}\square\end{math} RIPORTANO \begin{math}\square\end{math} NON RIPORTANO\\
+    l'elenco degli ingredienti e il numero del lotto di produzione (art. 21, comma 9 D.Lgs 6/2016);
+    \item la capacità massima di liquido contenente nicotina che risulta indicato sulle confezioni:
+    \begin{enumerate}
+        \item \begin{math}\square\end{math} È \begin{math}\square\end{math} NON È superiore al valore massimo di 2 ml nelle sigarette elettroniche usa e getta (art. 21 comma 6 D.Lgs 6/2016);
+        \item \begin{math}\square\end{math} È \begin{math}\square\end{math} NON È superiore al valore massimo di 2 ml nelle cartucce monouso (art. 21, comma 6 D.Lgs 6/2016);
+        \item \begin{math}\square\end{math} È \begin{math}\square\end{math} NON È superiore al valore massimo di 10 ml nei contenitori di liquido di ricarica (art. 21, comma 6 D.Lgs 6/2016);
+    \end{enumerate}
+
+    \item il contenuto massimo di nicotina da inalazione offerti al pubblico, \begin{math}\square\end{math} È \begin{math}\square\end{math} NON È superiore al valore di 20 mg/ml.
+\end{enumerate}
+
+L’esercizio commerciale verificato si rifornisce di prodotti liquidi da inalazione dai seguenti soggetti autorizzati, come si evince dalle bollette di carico relative ai prodotti liquidi da inalazione sopra riportati esibite dalla parte, su richiesta dei verbalizzanti: \\
+\begin{itemize}
+    \item Denominazione deposito fiscale / rappresentante fiscale:
+    \begin{itemize}[label={}]
+        \item \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_;
+        \item Sede legale: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_;
+        \item Codice d'imposta: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+    \end{itemize}
+    \item Denominazione deposito fiscale / rappresentante fiscale:
+    \begin{itemize}[label={}]
+        \item \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_;
+        \item Sede legale: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_;
+        \item Codice d'imposta: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+    \end{itemize}
+\end{itemize}
+
+Dall'esame di detta documentazione si constata che:
+\begin{itemize}
+    \item I/il deposito fiscale \\
+    \begin{math}\square\end{math} RISULTA \begin{math}\square\end{math} NON RISULTA\\
+    essere censito dall'Agenzia delle Dogane e dei Monopoli;
+    \item I prodotti liquidi da inalazione \\
+    \begin{math}\square\end{math} RISULTANO \begin{math}\square\end{math} NON RISULTANO\\
+    essere registrati con codice identificativo univoco dell'Agenzia delle Dogane e dei Monopoli.
+\end{itemize}
+
+Tali dati sono stati ottenuti mediante interrogazion della banca dati ADM, eseguita dal funzionario dell'ufficio in intestazione, \\
+    \begin{math}\square\end{math} Sig.ra \begin{math}\square\end{math} Sig.   \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_, su richiesta telefonica dei verbalizzanti.
+
+\newpage
+
+\begin{center}
+    \textbf{Dichiarazioni della parte}
+\end{center}
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\begin{center}
+    \textbf{Dichiarazioni dei verbalizzanti}
+\end{center}
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\\\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\\
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\textit{\textbf{Per le eventuali irregolarità l'Ufficio si riserva ogni doverosa e opportuna azione amministrativa con successivi atti.}}
+
+
+Si dà atto che durante le operazioni di verifica, svoltesi con la continua assistenza della parte, non sono stati arrecati danni né agli apparecchi oggetto di controllo né ai beni mobili e immobili, che nulla è stato asportato e che la parte non ha nulla da lamentare sull’operato dei verbalizzanti.\\
+Si dà atto, altresì, che le operazioni si sono protratte per il tempo strettamente necessario allo svolgimento delle stesse, ed hanno avuto termine alle ore \_\_\_\_\_\_.\_\_\_\_\_\_ dello stesso giorno.\\
+Il presente atto, che si compone di n. 9 facciate e n° \_\_\_\_\_\_ allegati, è redatto in n° 2 originali, uno per l’Ufficio dei Monopoli per le Marche dell’Agenzia delle Dogane e dei Monopoli - Sede di Pesaro, ed uno per la parte.\\
+Il verbale, letto e confermato senza ulteriori osservazioni ed eccezione di sorta, viene sottoscritto dai funzionari verbalizzanti e dalla parte, a cui si rilascia copia.\\
+
+
+Allegati:
+\begin{itemize}[label={}]
+    \item \begin{math}\square\end{math} Allegato A \begin{math}\square\end{math} Allegato B \begin{math}\square\end{math} Allegato C \begin{math}\square\end{math} Documentazione fotografica
+    \item \begin{math}\square\end{math} Letture \begin{math}\square\end{math} Altro \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{itemize}
+
+Recapiti per l'invio di eventuale documentazione:
+\begin{itemize}[label={}]
+    \item EMAIL: monopoli.marche.urp@adm.gov.it
+    \item PEC: monopoli.ancona@pec.adm.gov.it
+\end{itemize}
+
+\signature
+
+
+\end{document}
