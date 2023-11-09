@@ -15,20 +15,18 @@
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
-\newcommand\npuntoraccolta{$npuntoraccolta}
-\newcommand\nconcessione{$nconcessione}
-\newcommand\concessionario{$concessionario$}
+\newcommand\nPuntoRaccolta{$nPuntoRaccolta}
+\newcommand\nConcessione{$nConcessione}
+\newcommand\nomeConcessionario{$nomeConcessionario}
 \newcommand\denominazioneEsercizio{$denominazioneEsercizio}
 \newcommand\indirizzoEsercizio{$indirizzoEsercizio}
 \newcommand\dataInizioScommesse{$dataInizioScommesse}
-\newcommand\dataFineScommesse{$dataFineScommese}
+\newcommand\dataFineScommesse{$dataFineScommesse}
 \newcommand\picfAttivita{$picfAttivita}
-\newcommand\denominazioneEsercente{$denominazioneEsercente}
 \newcommand\verbalizzanteuno{$verbalizzante1}
 \newcommand\verbalizzantedue{$verbalizzante2}
 \newcommand\verbalizzantetre{$verbalizzante3}
 \newcommand\ordineDiAccesso{$ordineDiAccesso}
-\newcommand\annoIscrizione{$annoIscrizione}
 \newcommand\dataVerifica{$dataVerifica}
 \newcommand\titoloAutorizzatorio{$titoloAutorizzatorio}
 \newcommand\dataTitoloAutorizzatorio{$dataTitoloAutorizzatorio}
@@ -55,7 +53,7 @@
 \setlength{\headheight}{1.5cm}
 \lhead{\includegraphics[height=1cm]{logo-adm.jpg}}
 % DA CAMBIARE
-\rhead{\scriptsize{Segue processo verbale di verifica amministrativa concessionario: \concessionario}\\\scriptsize{Concessione n. \nconcessione punto n. \npuntoraccolta}\\\scriptsize{redatto in data \dataVerifica}}
+\rhead{\scriptsize{Segue processo verbale di verifica amministrativa concessionario: \nomeConcessionario}\\\scriptsize{Concessione n. \nconcessione punto n. \nPuntoRaccolta}\\\scriptsize{redatto in data \dataVerifica}}
 \cfoot{Pagina \thepage \hspace{1pt} di \pageref{LastPage}}
 
 
@@ -76,8 +74,8 @@
 
 {\centering
     \textbf{VERIFICA AMMINISTRATIVA}\\
-    \textit{PUNTO DI RACCOLTA N. \npuntoraccolta} \\
-    \textit{TITOLARE RACCOLTA SCOMMESSE CONCESSIONE N. \nconcessione}
+    \textit{PUNTO DI RACCOLTA N. \nPuntoRaccolta} \\
+    \textit{TITOLARE RACCOLTA SCOMMESSE CONCESSIONE N. \nConcessione}
     \par
 }
 
@@ -85,7 +83,7 @@
    \hline
     \multirowcell{7}{DATI \\ ESERCIZIO} & \\ & Denominazione: \denominazioneEsercizio \\ & Indirizzo: \indirizzoEsercizio \\ &  P.IVA/C.F.: \picfAttivita \\ & Telefono: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Orari: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
     \hline
-    \multirowcell{3}{CONCESSIONARIO} & \\ & \concessionario \\ &  \\
+    \multirowcell{3}{CONCESSIONARIO} & \\ & \nomeConcessionario \\ &  \\
     \hline
     \multirowcell{9}{TITOLARE\\ \scriptsize{o} \\ \scriptsize{AMMINISTRATORE}} & \\ & COGNOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ NOME: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & NATO A: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ IL: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & RESIDENTE IN: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & INDIRIZZO: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & Identificato a mezzo \begin{math}\;\square\end{math} carta d'identità \begin{math}\;\square\end{math} patente di guida \begin{math}\;\square\end{math} altro \\ & rilasciato/a da \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ scadente il \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & in qualità di \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\ & \\
     \hline
@@ -150,7 +148,7 @@ Il/La Sig. \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
 
 \begin{enumerate}
     \item \textbf{Licenza} di pubblica sicurezza ai sensi dell’\textbf{art. 88} del T.U.L.P.S., avente ad oggetto le scommesse di cui all'art. 1 comma 643 lettera c) della Legge 23 dicembre 2014 n. 190,  rilasciata dalla Questura di \_\_\_\_\_\_\_\_\_\_\_\_ in data \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_ prot. \_\_\_\_\_\_\_\_\_\_\_\_;
-    \item Contratto con il TITOLARE DELLA RACCOLTA SCOMMESSE \concessionario del \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_ di cui al Titolo autorizzatorio rilasciato da AAMS n. \titoloAutorizzatorio del \dataTitoloAutorizzatorio
+    \item Contratto con il TITOLARE DELLA RACCOLTA SCOMMESSE \nomeConcessionario del \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_ di cui al Titolo autorizzatorio rilasciato da AAMS n. \titoloAutorizzatorio del \dataTitoloAutorizzatorio
     \item Contratto con Concessionario \_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_ \_\_\_\_\_\_\_\_\_\_\_\_  del \_\_\_\_\_\_/\_\_\_\_\_\_/\_\_\_\_\_\_ per l'attività di promozione, pubblicazione e diffusione dei giochi a distanza.
 \end{enumerate}
 
