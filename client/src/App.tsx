@@ -434,7 +434,7 @@ async function generatePLI() {
         "indirizzoEsercizio": activityAddress,
         "picfAttivita": activityCF.toUpperCase(),
         "denominazioneEsercente": denominazioneEsercente,
-        "nRivendita": (nRivendita.length === 0) ? "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_" : nRivendita,
+        "nRivendita": (nRivendita.length === 0) ? "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_" : nRivendita,
         "verbalizzante1": verbalizzante1,
         "verbalizzante2": verbalizzante2,
         "verbalizzante3": verbalizzante3,
