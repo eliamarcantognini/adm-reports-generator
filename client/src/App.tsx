@@ -210,7 +210,26 @@ function App() {
                 {
                     selectedOption === 'PLI' && (
                         <div>
-                            <p>NON IMPLEMENTATO</p>
+                            <div>
+                                <div>
+                                    <h3>DATI DELL'ESERCIZIO</h3>
+                                    <TextField id="activityName" label="Nome esercizio" variant="outlined"/>
+                                    <TextField id="activityAddress" label="Indirizzo esercizio" variant="outlined"/>
+                                    <TextField id="comuneEsercizio" label="Comune esercizio" variant="outlined"/>
+                                    <TextField id="activityCF" label="PI/CF attività" variant="outlined"/>
+                                    <TextField id="denominazioneEsercente" label="Nome esercente" variant="outlined"/>
+                                    <TextField id="nRivendita" label="Num. rivendita" variant="outlined"/>
+                                </div>
+                                <div>
+                                    <h3>DATI DELLA VERIFICA</h3>
+                                    <TextField id="oda" label="Ordine di accesso" variant="outlined"/>
+                                    <TextField id="date" label="Data verifica" variant="outlined"/>
+                                    <TextField id="verb1" label="Verbalizzante" variant="outlined"/>
+                                    <TextField id="verb2" label="Verbalizzante" variant="outlined"/>
+                                    <TextField id="verb3" label="Verbalizzante" variant="outlined"/>
+                                </div>
+                            </div>
+                            <Button variant="contained" color="primary" onClick={() => generatePLI()}>Genera</Button>
                         </div>
                     )
                 }
@@ -400,7 +419,30 @@ async function generatePatentino() {
 }
 
 async function generatePLI() {
+    const activityName = (document.getElementById('activityName') as HTMLInputElement).value;
+    const activityAddress = (document.getElementById('activityAddress') as HTMLInputElement).value;
+    const activityCF = (document.getElementById('activityCF') as HTMLInputElement).value;
+    const denominazioneEsercente = (document.getElementById('denominazioneEsercente') as HTMLInputElement).value;
+    const nRivendita = (document.getElementById('nRivendita') as HTMLInputElement).value;
+    const oda = (document.getElementById('oda') as HTMLInputElement).value;
+    const date = (document.getElementById('date') as HTMLInputElement).value;
+    const verbalizzante1 = (document.getElementById('verb1') as HTMLInputElement).value;
+    const verbalizzante2 = (document.getElementById('verb2') as HTMLInputElement).value;
+    const verbalizzante3 = (document.getElementById('verb3') as HTMLInputElement).value;
+    const verbale = JSON.stringify({
+        "denominazioneEsercizio": activityName.toUpperCase(),
+        "indirizzoEsercizio": activityAddress,
+        "picfAttivita": activityCF.toUpperCase(),
+        "denominazioneEsercente": denominazioneEsercente,
+        "nRivendita": (nRivendita.length === 0) ? "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_" : nRivendita,
+        "verbalizzante1": verbalizzante1,
+        "verbalizzante2": verbalizzante2,
+        "verbalizzante3": verbalizzante3,
+        "ordineDiAccesso": oda,
+        "dataVerifica": (date.length === 0) ? "\\_\\_\\_\\_/\\_\\_\\_\\_/\\_\\_\\_\\_\\_\\_\\_\\_" : date,
+    });
 
+    postVerbale(verbale, "pli");
 }
 
 

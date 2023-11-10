@@ -7,6 +7,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
 
 from models.AWP import AWPModel
+from models.PLI import PliModel
 from models.Patentino import PatentinoModel
 from models.Raccolta import RaccoltaModel
 from models.Rivendita import RivenditaModel
@@ -135,6 +136,29 @@ async def patentino(patentinoMessage: PatentinoModel):
     print(dict(patentinoMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(patentinoMessage)))
+    clean(tex, aux, log)
+    headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control_Allow-Methods": "POST",
+        'Content-Disposition': f'attachment; filename={filename}.pdf',
+    }
+    return FileResponse(f"pdf\\{filename}.pdf", media_type='application/pdf', filename=f"{filename}.pdf",
+                        headers=headers)
+
+
+@app.post("/pli", response_class=FileResponse)
+async def pli(pliMessage: PliModel):
+    with open('templates/pli.tex', mode='r', encoding='utf-8') as file:
+        template = Template(file.read())
+    today = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    filename = f"pli_{today}"
+    tex = f"{filename}.tex"
+    aux = f"pdf\\{filename}.aux"
+    log = f"pdf\\{filename}.log"
+    print(dict(pliMessage))
+    with open(f"{tex}", mode='w', encoding='utf-8') as file:
+        file.write(template.substitute(dict(pliMessage)))
     clean(tex, aux, log)
     headers = {
         "Access-Control-Allow-Origin": "*",
