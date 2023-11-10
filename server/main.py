@@ -7,6 +7,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
 
 from models.AWP import AWPModel
+from models.Patentino import PatentinoModel
 from models.Raccolta import RaccoltaModel
 from models.Rivendita import RivenditaModel
 from models.VLT import VLTModel
@@ -111,6 +112,29 @@ async def rivendita(rivenditaMessage: RivenditaModel):
     print(dict(rivenditaMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(rivenditaMessage)))
+    clean(tex, aux, log)
+    headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control_Allow-Methods": "POST",
+        'Content-Disposition': f'attachment; filename={filename}.pdf',
+    }
+    return FileResponse(f"pdf\\{filename}.pdf", media_type='application/pdf', filename=f"{filename}.pdf",
+                        headers=headers)
+
+
+@app.post("/patentino", response_class=FileResponse)
+async def patentino(patentinoMessage: PatentinoModel):
+    with open('templates/patentino.tex', mode='r', encoding='utf-8') as file:
+        template = Template(file.read())
+    today = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    filename = f"patentino_{today}"
+    tex = f"{filename}.tex"
+    aux = f"pdf\\{filename}.aux"
+    log = f"pdf\\{filename}.log"
+    print(dict(patentinoMessage))
+    with open(f"{tex}", mode='w', encoding='utf-8') as file:
+        file.write(template.substitute(dict(patentinoMessage)))
     clean(tex, aux, log)
     headers = {
         "Access-Control-Allow-Origin": "*",

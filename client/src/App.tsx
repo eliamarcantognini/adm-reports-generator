@@ -176,7 +176,32 @@ function App() {
                 {
                     selectedOption === 'Patentino' && (
                         <div>
-                            <p>NON IMPLEMENTATO</p>
+                            <div>
+                                <div>
+                                    <h3>DATI DELL'ESERCIZIO</h3>
+                                    <TextField id="activityName" label="Nome esercizio" variant="outlined"/>
+                                    <TextField id="activityAddress" label="Indirizzo esercizio" variant="outlined"/>
+                                    <TextField id="comuneEsercizio" label="Comune esercizio" variant="outlined"/>
+                                    <TextField id="activityCF" label="PI/CF attività" variant="outlined"/>
+                                    <TextField id="denominazioneEsercente" label="Nome esercente" variant="outlined"/>
+                                </div>
+                                <div>
+                                    <h3>DATI DELLA RIVENDITA E DEL PATENTINO</h3>
+                                    <TextField id="nRivendita" label="Num. rivendita" variant="outlined"/>
+                                    <TextField id="localitaRivendita" label="Comune rivendita" variant="outlined"/>
+                                    <TextField id="nPatentino" label="Num. patentino" variant="outlined"/>
+                                    <TextField id="localitaPatentino" label="Comune patentino" variant="outlined"/>
+                                </div>
+                                <div>
+                                    <h3>DATI DELLA VERIFICA</h3>
+                                    <TextField id="oda" label="Ordine di accesso" variant="outlined"/>
+                                    <TextField id="date" label="Data verifica" variant="outlined"/>
+                                    <TextField id="verb1" label="Verbalizzante" variant="outlined"/>
+                                    <TextField id="verb2" label="Verbalizzante" variant="outlined"/>
+                                    <TextField id="verb3" label="Verbalizzante" variant="outlined"/>
+                                </div>
+                            </div>
+                            <Button variant="contained" color="primary" onClick={() => generatePatentino()}>Genera</Button>
                         </div>
                     )
                 }
@@ -342,7 +367,36 @@ async function generateRivendita() {
 }
 
 async function generatePatentino() {
+    const activityName = (document.getElementById('activityName') as HTMLInputElement).value;
+    const activityAddress = (document.getElementById('activityAddress') as HTMLInputElement).value;
+    const localitaRivendita = (document.getElementById('localitaRivendita') as HTMLInputElement).value;
+    const localitaPatentino = (document.getElementById('localitaPatentino') as HTMLInputElement).value;
+    const activityCF = (document.getElementById('activityCF') as HTMLInputElement).value;
+    const denominazioneEsercente = (document.getElementById('denominazioneEsercente') as HTMLInputElement).value;
+    const nRivendita = (document.getElementById('nRivendita') as HTMLInputElement).value;
+    const nPatentino = (document.getElementById('nPatentino') as HTMLInputElement).value;
+    const oda = (document.getElementById('oda') as HTMLInputElement).value;
+    const date = (document.getElementById('date') as HTMLInputElement).value;
+    const verbalizzante1 = (document.getElementById('verb1') as HTMLInputElement).value;
+    const verbalizzante2 = (document.getElementById('verb2') as HTMLInputElement).value;
+    const verbalizzante3 = (document.getElementById('verb3') as HTMLInputElement).value;
+    const verbale = JSON.stringify({
+        "denominazioneEsercizio": activityName.toUpperCase(),
+        "indirizzoEsercizio": activityAddress,
+        "localitaRivendita": (localitaRivendita.length === 0) ? "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_" : localitaRivendita,
+        "localitaPatentino": (localitaPatentino.length === 0) ? "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_" : localitaPatentino,
+        "picfAttivita": activityCF.toUpperCase(),
+        "denominazioneEsercente": denominazioneEsercente,
+        "nRivendita": (nRivendita.length === 0) ? "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_" : nRivendita,
+        "nPatentino": (nPatentino.length === 0) ? "\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_" : nPatentino,
+        "verbalizzante1": verbalizzante1,
+        "verbalizzante2": verbalizzante2,
+        "verbalizzante3": verbalizzante3,
+        "ordineDiAccesso": oda,
+        "dataVerifica": (date.length === 0) ? "\\_\\_\\_\\_/\\_\\_\\_\\_/\\_\\_\\_\\_\\_\\_\\_\\_" : date,
+    });
 
+    postVerbale(verbale, "patentino");
 }
 
 async function generatePLI() {
