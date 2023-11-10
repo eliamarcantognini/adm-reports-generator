@@ -128,3 +128,4 @@ def clean(tex: str, aux: str, log: str):
     os.system(f"del {log}")
     os.system(f"del {aux}")
     os.system(f"del {tex}")
+    os.system(f"del *.tex")
