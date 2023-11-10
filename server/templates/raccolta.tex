@@ -22,6 +22,9 @@
 \newcommand\indirizzoEsercizio{$indirizzoEsercizio}
 \newcommand\dataInizioScommesse{$dataInizioScommesse}
 \newcommand\dataFineScommesse{$dataFineScommesse}
+\newcommand\bigliettiAnnullati{$bigliettiAnnullati}
+\newcommand\bigliettiPagati{$bigliettiPagati}
+\newcommand\bigliettiRimborsati{$bigliettiRimborsati}
 \newcommand\picfAttivita{$picfAttivita}
 \newcommand\verbalizzanteuno{$verbalizzante1}
 \newcommand\verbalizzantedue{$verbalizzante2}
@@ -53,7 +56,7 @@
 \setlength{\headheight}{1.5cm}
 \lhead{\includegraphics[height=1cm]{logo-adm.jpg}}
 % DA CAMBIARE
-\rhead{\scriptsize{Segue processo verbale di verifica amministrativa concessionario: \nomeConcessionario}\\\scriptsize{Concessione n. \nconcessione punto n. \nPuntoRaccolta}\\\scriptsize{redatto in data \dataVerifica}}
+\rhead{\scriptsize{Segue processo verbale di verifica amministrativa concessionario: \nomeConcessionario}\\\scriptsize{Concessione n. \nConcessione punto n. \nPuntoRaccolta}\\\scriptsize{redatto in data \dataVerifica}}
 \cfoot{Pagina \thepage \hspace{1pt} di \pageref{LastPage}}
 
 
@@ -177,15 +180,15 @@ A seguito della richiesta:
 
     \begin{tabularx}{\linewidth}{|l| Y | Y | Y | Y |}
         \hline
-        \multicolumn{5}{|c|}{\textbf{PERIODO CONTABILE DAL var AL var}} \\
+        \multicolumn{5}{|c|}{\textbf{PERIODO CONTABILE DAL \dataInizioScommesse AL \dataFineScommesse}} \\
         \hline
         & Previsti & Totali & Verificati & Mancanti \\
         \hline
-        ANNULLATI & var &  &  & \\
+        ANNULLATI & \bigliettiAnnullati &  &  & \\
         \hline
-        PAGATI & var &  &  & \\
+        PAGATI & \bigliettiPagati &  &  & \\
         \hline
-        RIMBORSATI & var &  &  & \\
+        RIMBORSATI & \bigliettiRimborsati &  &  & \\
         \hline
     \end{tabularx}
 \end{enumerate}
