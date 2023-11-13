@@ -2,6 +2,7 @@ import datetime
 import os
 from string import Template
 
+import uvicorn
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
@@ -177,3 +178,10 @@ def clean(tex: str, aux: str, log: str):
     os.system(f"del {aux}")
     os.system(f"del {tex}")
     os.system(f"del *.tex")
+
+def serve():
+    """Serve the application."""
+    uvicorn.run(app, port=8123)
+
+if __name__ == "__main__":
+    serve()
