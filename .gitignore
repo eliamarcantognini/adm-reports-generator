@@ -2,4 +2,4 @@
 *.pyc
 *.pdf
 ./server/*.tex
-./server/build
+./server/build/
