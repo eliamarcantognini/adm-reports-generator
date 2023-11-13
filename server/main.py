@@ -42,7 +42,6 @@ def awp(awpMessage: AWPModel):
     tex = f"{filename}.tex"
     aux = f"pdf\\{filename}.aux"
     log = f"pdf\\{filename}.log"
-    print(dict(awpMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(awpMessage)))
     clean(tex, aux, log)
@@ -65,7 +64,6 @@ async def vlt(vltMessage: VLTModel):
     tex = f"{filename}.tex"
     aux = f"pdf\\{filename}.aux"
     log = f"pdf\\{filename}.log"
-    print(dict(vltMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(vltMessage)))
     clean(tex, aux, log)
@@ -88,7 +86,6 @@ async def raccolta(raccoltaMessage: RaccoltaModel):
     tex = f"{filename}.tex"
     aux = f"pdf\\{filename}.aux"
     log = f"pdf\\{filename}.log"
-    print(dict(raccoltaMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(raccoltaMessage)))
     clean(tex, aux, log)
@@ -111,7 +108,6 @@ async def rivendita(rivenditaMessage: RivenditaModel):
     tex = f"{filename}.tex"
     aux = f"pdf\\{filename}.aux"
     log = f"pdf\\{filename}.log"
-    print(dict(rivenditaMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(rivenditaMessage)))
     clean(tex, aux, log)
@@ -134,7 +130,6 @@ async def patentino(patentinoMessage: PatentinoModel):
     tex = f"{filename}.tex"
     aux = f"pdf\\{filename}.aux"
     log = f"pdf\\{filename}.log"
-    print(dict(patentinoMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(patentinoMessage)))
     clean(tex, aux, log)
@@ -157,7 +152,6 @@ async def pli(pliMessage: PliModel):
     tex = f"{filename}.tex"
     aux = f"pdf\\{filename}.aux"
     log = f"pdf\\{filename}.log"
-    print(dict(pliMessage))
     with open(f"{tex}", mode='w', encoding='utf-8') as file:
         file.write(template.substitute(dict(pliMessage)))
     clean(tex, aux, log)
