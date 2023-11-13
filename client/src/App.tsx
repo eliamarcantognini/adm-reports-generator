@@ -453,7 +453,7 @@ async function postVerbale(verbale: string, tipo: string) {
         p.innerHTML = "Generazione in corso...";
         (document.getElementById('root') as HTMLDivElement).appendChild(p);
         let filename = "";
-        await axios.post('http://localhost:8000/' + tipo, verbale,
+        await axios.post('http://localhost:8123/' + tipo, verbale,
             {
                 responseType: 'blob',
                 headers:
