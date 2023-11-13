@@ -1,21 +1,21 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const {app, BrowserWindow} = require('electron')
 
 const createWindow = () => {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        show: false,
         webPreferences: {
             enableRemoteModule: true,
         }
     })
-
     // and load the index.html of the app.
-    mainWindow.loadURL('http://localhost:3000')
-
+    mainWindow.loadURL('http://localhost:3000').then(r => {
+        mainWindow.maximize()
+        mainWindow.show()
+    })
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
 }
@@ -25,6 +25,7 @@ const createWindow = () => {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
     createWindow()
+
 
     app.on('activate', () => {
         // On macOS it's common to re-create a window in the app when the
